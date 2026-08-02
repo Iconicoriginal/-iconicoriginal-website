@@ -59,6 +59,29 @@ Da fare al lancio (manuale):
    banner cookie si attiva da solo quando l'ID è presente).
 4. Verificare la P.IVA/ragione sociale nelle pagine privacy (placeholder generico).
 
+## Giro 1 revisioni (02/08/2026) — regole permanenti
+
+- **Terminologia**: MAI "pellicola/pellicole" nei testi visibili → sempre "Finiture
+  3M DI-NOC" (EN: finishes, DE: Oberflächen). Unica eccezione: una risposta FAQ in
+  /come-lavoro/ per lingua ("note anche come pellicole architettoniche") per la
+  ricerca Google. Lo sweep di controllo è in scratchpad/sweep-giro1.mjs.
+- **Tono**: B2B misurato, niente prima persona ("Garantisco io" ecc. eliminati).
+  Messaggio differenziante: "Un solo interlocutore, dall'idea all'inaugurazione."
+- **Target**: solo business (negozi, insegne, hotel, contract). Haifa resta solo
+  come voce di portfolio.
+- **Logo**: monocromatico SVG (nero header/chiaro, bianco footer/bande scure, via
+  filter:invert su hero scuri). Logo IconicWall sulla pagina sistema modulare.
+  Logo schema.org raster: brand/logo-iconic-schema.png.
+- **Numeri**: 9 Paesi ovunque (IT, AT, FR, DE, NL, BE, LU, GR, CY); Israele citato
+  solo come progetto.
+- **Guess**: pagina con striscia totali (19 negozi · 9 Paesi · 4.500+ m² ·
+  2021–2023), mappa Europa SVG interattiva (partial in tools/partials/,
+  generatore in scratchpad/generate-map.mjs) e lista delle 19 città.
+- **SLOT da sostituire quando Yuri consegna gli scatti** (cercare "slot-badge"):
+  foto flagship Guess (hero + 5 gallery) e coppie prima/dopo (home, restyling,
+  fiorella-rubino, oltre — nelle 3 lingue). Basta sostituire i file immagine o
+  aggiornare i src e rimuovere gli <span class="slot-badge">.
+
 ## Contenuti preservati dal vecchio sito
 
 Claim: "Mantieni la storia, rinnova il design", "Semplicemente si riveste".

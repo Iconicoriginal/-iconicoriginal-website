@@ -13,7 +13,7 @@
       formErrorPrivacy: "Serve il consenso al trattamento dei dati.",
       formSending: "Invio in corso…",
       formSubmit: "Invia la richiesta",
-      formSuccess: "Grazie! Il messaggio è arrivato: ti rispondo personalmente entro un giorno lavorativo.",
+      formSuccess: "Grazie! Il messaggio è arrivato: ti rispondiamo entro un giorno lavorativo.",
       formError: "Si è verificato un errore nell'invio. Riprova, oppure scrivi a info@iconicoriginal.it.",
       cookieText: "Questo sito usa cookie tecnici e, solo con il tuo consenso, cookie di misurazione del traffico.",
       cookieAccept: "Accetta",
@@ -28,7 +28,7 @@
       formErrorPrivacy: "Consent to data processing is required.",
       formSending: "Sending…",
       formSubmit: "Send request",
-      formSuccess: "Thank you! Your message has arrived: I will reply personally within one working day.",
+      formSuccess: "Thank you! Your message has arrived: we will reply within one working day.",
       formError: "Something went wrong. Please try again or write to info@iconicoriginal.it.",
       cookieText: "This site uses technical cookies and, only with your consent, traffic measurement cookies.",
       cookieAccept: "Accept",
@@ -43,7 +43,7 @@
       formErrorPrivacy: "Die Einwilligung zur Datenverarbeitung ist erforderlich.",
       formSending: "Wird gesendet…",
       formSubmit: "Anfrage senden",
-      formSuccess: "Danke! Ihre Nachricht ist angekommen: Ich antworte Ihnen persönlich innerhalb eines Werktags.",
+      formSuccess: "Danke! Ihre Nachricht ist angekommen: Wir antworten Ihnen innerhalb eines Werktags.",
       formError: "Beim Senden ist ein Fehler aufgetreten. Bitte erneut versuchen oder an info@iconicoriginal.it schreiben.",
       cookieText: "Diese Website verwendet technische Cookies und – nur mit Ihrer Einwilligung – Cookies zur Reichweitenmessung.",
       cookieAccept: "Akzeptieren",
@@ -152,6 +152,44 @@
       if (e.key === "ArrowRight") slider.style.setProperty("--ba", Math.min(100, cur + 5) + "%");
     });
   });
+
+  /* --- Mappa Europa: tooltip sui pin --- */
+  const mapWrap = document.querySelector(".europe-map-wrap");
+  if (mapWrap) {
+    const tip = document.createElement("div");
+    tip.className = "map-tip";
+    tip.setAttribute("aria-hidden", "true");
+    mapWrap.appendChild(tip);
+    const pins = mapWrap.querySelectorAll(".pin");
+    const showTip = (pin) => {
+      pins.forEach((p) => p.classList.remove("active"));
+      pin.classList.add("active");
+      tip.innerHTML = `<strong>${pin.dataset.city}</strong> <span>· ${pin.dataset.country}</span>`;
+      const pr = pin.getBoundingClientRect();
+      const wr = mapWrap.getBoundingClientRect();
+      tip.style.left = `${pr.left + pr.width / 2 - wr.left}px`;
+      tip.style.top = `${pr.top - wr.top}px`;
+      tip.classList.add("visible");
+    };
+    const hideTip = () => {
+      tip.classList.remove("visible");
+      pins.forEach((p) => p.classList.remove("active"));
+    };
+    pins.forEach((pin) => {
+      pin.addEventListener("pointerenter", () => showTip(pin));
+      pin.addEventListener("pointerleave", hideTip);
+      pin.addEventListener("focus", () => showTip(pin));
+      pin.addEventListener("blur", hideTip);
+      pin.addEventListener("click", (e) => { e.preventDefault(); showTip(pin); });
+      pin.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showTip(pin); }
+        if (e.key === "Escape") hideTip();
+      });
+    });
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".pin")) hideTip();
+    });
+  }
 
   /* --- Accordion --- */
   document.querySelectorAll(".accordion-item").forEach((item) => {

@@ -77,11 +77,12 @@ button, input, textarea, select { font: inherit; }
   letter-spacing: -.07em;
 }
 .brand img {
-  width: clamp(160px, 14vw, 240px);
-  height: auto;
+  height: clamp(38px, 4.2vw, 52px);
+  width: auto;
   max-width: 42vw;
   display: block;
 }
+.site-header.scrolled .brand img { height: 36px; }
 .dark-header .site-header:not(.scrolled) .brand img {
   filter: invert(1);
 }
@@ -892,7 +893,7 @@ button, input, textarea, select { font: inherit; }
   color: #f0b1a8;
 }
 .form-status.success {
-  color: #b8d7bf;
+  color: #cbb89e;
 }
 .cookie-banner {
   position: fixed;
@@ -1780,6 +1781,118 @@ footer a:focus-visible {
 /* --- Sezione contatto rapido nel footer delle pagine progetto --- */
 .quote-section p { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
 
+/* --- Badge slot (contenuti provvisori in attesa degli scatti definitivi) --- */
+.slot-badge {
+  position: absolute;
+  top: .9rem;
+  left: .9rem;
+  z-index: 3;
+  padding: .35rem .65rem;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: rgba(242, 240, 235, .92);
+  border: 1px dashed var(--bronze-ink);
+  pointer-events: none;
+}
+.slot-frame { position: relative; }
+
+/* --- Logo IconicWall nella pagina sistema modulare --- */
+.iw-logo { height: 40px; width: auto; display: block; }
+.iw-logo.large { height: 52px; margin-bottom: 1.4rem; }
+
+/* --- Striscia totali (case history) --- */
+.stats-band { padding: clamp(3.5rem, 7vw, 6rem) 7vw; }
+.stats-band .number-card small {
+  display: block;
+  margin-top: .4rem;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* --- Mappa Europa interattiva (SVG inline) --- */
+.europe-map-wrap {
+  position: relative;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+.europe-map { display: block; width: 100%; height: auto; }
+.europe-map .land { fill: var(--bronze); opacity: .28; }
+.europe-map .pin {
+  cursor: pointer;
+  outline: none;
+}
+.europe-map .pin circle.dot {
+  fill: var(--bronze-ink);
+  stroke: var(--paper);
+  stroke-width: 2;
+  transition: fill .25s;
+}
+.europe-map .pin circle.halo {
+  fill: none;
+  stroke: var(--bronze-ink);
+  stroke-width: 1;
+  opacity: 0;
+  transition: opacity .25s, r .25s;
+}
+.europe-map .pin:hover circle.dot,
+.europe-map .pin:focus-visible circle.dot,
+.europe-map .pin.active circle.dot { fill: var(--ink); }
+.europe-map .pin:hover circle.halo,
+.europe-map .pin:focus-visible circle.halo,
+.europe-map .pin.active circle.halo { opacity: .55; }
+.europe-map .pin:focus-visible circle.dot { stroke: var(--ink); }
+.map-tip {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, calc(-100% - 14px));
+  padding: .6rem .9rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: .78rem;
+  letter-spacing: .04em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s;
+}
+.map-tip.visible { opacity: 1; }
+.map-tip strong { font-weight: 500; }
+.map-tip span { color: rgba(242,240,235,.65); }
+.map-tip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--ink);
+}
+
+/* --- Lista città (fallback mobile + elenco) --- */
+.city-list {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.city-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem .2rem;
+  border-bottom: 1px solid var(--line);
+  font-size: .88rem;
+}
+.city-list li span { color: var(--muted); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; align-self: center; }
+
 /* --- responsive --- */
 @media (max-width: 980px) {
   .pledge-section { grid-template-columns: 1fr; }
@@ -1789,6 +1902,10 @@ footer a:focus-visible {
   .finish-row:nth-child(even) .finish-media { order: 0; }
 }
 @media (max-width: 700px) {
+  .europe-map-wrap { display: none; }
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .numbers-grid .number-card:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .numbers-grid .number-card { padding-top: 1.4rem; }
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-grid .wide img { aspect-ratio: 4 / 3; }
   .map-figure .map-desktop { display: none; }

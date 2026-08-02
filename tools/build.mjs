@@ -17,7 +17,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
 const HOST = "https://www.iconicoriginal.it";
 const LANGS = ["it", "en", "de"];
-const V = 5; // bump a ogni modifica di styles.css / script.js
+const V = 6; // bump a ogni modifica di styles.css / script.js
 
 /* ------------------------------------------------------------------ */
 /* Dizionari header/footer                                             */
@@ -25,7 +25,7 @@ const V = 5; // bump a ogni modifica di styles.css / script.js
 const NAV = {
   it: [
     ["restyling", "Restyling"],
-    ["come-lavoro", "Come lavoro"],
+    ["come-lavoro", "Come lavoriamo"],
     ["realizzazioni", "Realizzazioni"],
     ["materiali", "Materiali"],
     ["sistema-modulare-magnetico", "Sistema modulare"],
@@ -34,7 +34,7 @@ const NAV = {
   ],
   en: [
     ["restyling", "Restyling"],
-    ["come-lavoro", "How I work"],
+    ["come-lavoro", "How we work"],
     ["realizzazioni", "Projects"],
     ["materiali", "Materials"],
     ["sistema-modulare-magnetico", "Modular system"],
@@ -55,7 +55,7 @@ const NAV = {
 const FOOTER = {
   it: {
     payoff: "Mantieni la storia, rinnova il design.",
-    claim: "Riqualificazione di interni senza demolizioni con pellicole 3M DI-NOC. Un unico referente che progetta, organizza il cantiere e garantisce il risultato — in Italia e all'estero.",
+    claim: "Riqualificazione di interni senza demolizioni con Finiture 3M DI-NOC. Un unico interlocutore che progetta, coordina il cantiere e segue il risultato — in Italia e all'estero.",
     menuTitle: "Menu",
     sedeTitle: "Sede",
     legalPrivacy: "Privacy Policy",
@@ -66,7 +66,7 @@ const FOOTER = {
   },
   en: {
     payoff: "Keep the story, renew the design.",
-    claim: "Interior refurbishment without demolition using 3M DI-NOC architectural films. One single point of contact who designs, organises the works and guarantees the result — in Italy and abroad.",
+    claim: "Interior refurbishment without demolition with 3M DI-NOC architectural finishes. One single point of contact who designs, coordinates the works and follows the result through — in Italy and abroad.",
     menuTitle: "Menu",
     sedeTitle: "Headquarters",
     legalPrivacy: "Privacy Policy",
@@ -77,7 +77,7 @@ const FOOTER = {
   },
   de: {
     payoff: "Bewahren Sie die Geschichte, erneuern Sie das Design.",
-    claim: "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Architekturfolien. Ein einziger Ansprechpartner, der plant, die Baustelle organisiert und das Ergebnis garantiert — in Italien und im Ausland.",
+    claim: "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Oberflächen. Ein einziger Ansprechpartner, der plant, die Baustelle koordiniert und das Ergebnis bis zur Übergabe begleitet — in Italien und im Ausland.",
     menuTitle: "Menü",
     sedeTitle: "Firmensitz",
     legalPrivacy: "Datenschutzerklärung",
@@ -125,7 +125,11 @@ for (const lang of LANGS) {
     const m = raw.match(/^<!--META\s*({[\s\S]*?})\s*-->/);
     if (!m) throw new Error(`META mancante in ${lang}/${f}`);
     const meta = JSON.parse(m[1]);
-    const body = raw.slice(m[0].length).trim();
+    let body = raw.slice(m[0].length).trim();
+    // include di partial per lingua: <!--INCLUDE:nome--> → tools/partials/nome-<lang>.svg
+    body = body.replace(/<!--INCLUDE:([\w-]+)-->/g, (_, name) =>
+      readFileSync(join(ROOT, "tools", "partials", `${name}-${lang}.svg`), "utf8")
+    );
     const slug = String(f).replace(/\\/g, "/").replace(/\.html$/, "");
     (pages[slug] ||= {})[lang] = { meta, body };
   }
@@ -153,7 +157,7 @@ function headerHtml(lang, slug) {
   return `<a class="skip-link sr-only" href="#main">Skip</a>
   <header class="site-header">
     <a class="brand" href="${p}/" aria-label="Iconic Original — home">
-      <img src="/assets/img/brand/logo-iconic-pos.webp" alt="Iconic Original — Dress your interiors" width="240" height="53">
+      <img src="/assets/img/brand/iconic-logo-black.svg" alt="Iconic Original — Dress your interiors" width="115" height="50">
     </a>
     <nav class="main-nav" aria-label="Principale">
       ${items}
@@ -181,7 +185,7 @@ function footerHtml(lang) {
     <div class="footer-inner">
       <div class="footer-columns">
         <div class="footer-column">
-          <p class="footer-brand"><img src="/assets/img/brand/logo-iconic-neg.webp" alt="Iconic Original" width="200" height="44" loading="lazy"></p>
+          <p class="footer-brand"><img src="/assets/img/brand/iconic-logo-white.svg" alt="Iconic Original" width="145" height="63" loading="lazy"></p>
           <div class="footer-intro"><p>${f.payoff}<br>${f.claim}</p></div>
           <p class="footer-endorsed">
             <img src="/assets/img/brand/logo-3m-endorsed.webp" alt="3M Endorsed Installer" width="120" height="76" loading="lazy">
@@ -222,15 +226,15 @@ function localBusinessLd(lang) {
     "@id": `${HOST}/#organization`,
     name: "Iconic Original",
     url: `${HOST}/`,
-    logo: `${HOST}/assets/img/brand/logo-iconic-pos.webp`,
+    logo: `${HOST}/assets/img/brand/logo-iconic-schema.png`,
     image: `${HOST}/assets/img/ambienti/hall-hotel-restyling.webp`,
     slogan: "Mantieni la storia, rinnova il design.",
     description:
       lang === "en"
-        ? "Interior refurbishment without demolition using 3M DI-NOC architectural films, in Italy and abroad."
+        ? "Interior refurbishment without demolition with 3M DI-NOC architectural finishes, in Italy and abroad."
         : lang === "de"
-          ? "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Architekturfolien, in Italien und im Ausland."
-          : "Riqualificazione di interni senza demolizioni con pellicole 3M DI-NOC, in Italia e all'estero.",
+          ? "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Oberflächen, in Italien und im Ausland."
+          : "Riqualificazione di interni senza demolizioni con Finiture 3M DI-NOC, in Italia e all'estero.",
     telephone: "+39 0437 794268",
     email: "info@iconicoriginal.it",
     address: {
@@ -242,7 +246,7 @@ function localBusinessLd(lang) {
       addressCountry: "IT",
     },
     geo: { "@type": "GeoCoordinates", latitude: 46.3471, longitude: 12.1804 },
-    areaServed: ["IT", "FR", "DE", "LU", "BE", "GR", "CY", "IL"],
+    areaServed: ["IT", "FR", "DE", "AT", "NL", "LU", "BE", "GR", "CY", "IL"],
     sameAs: [
       "https://www.instagram.com/iconic_dressyourinteriors/",
       "https://www.iconicwall.it/",

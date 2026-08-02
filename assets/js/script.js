@@ -153,41 +153,170 @@
     });
   });
 
-  /* --- Mappa Europa: tooltip sui pin --- */
-  const mapWrap = document.querySelector(".europe-map-wrap");
-  if (mapWrap) {
+  /* --- Mappa Europa: zoom, pan, tooltip e sincronizzazione con la colonna --- */
+  const mapBoard = document.querySelector(".map-board");
+  if (mapBoard) {
+    const wrap = mapBoard.querySelector(".europe-map-wrap");
+    const svg = mapBoard.querySelector(".europe-map");
+    const pins = [...svg.querySelectorAll(".pin")];
+    const items = [...mapBoard.querySelectorAll(".city-list li")];
+    const byKey = {};
+    pins.forEach((p) => { (byKey[p.dataset.k] ||= {}).pin = p; });
+    items.forEach((li) => {
+      const btn = li.querySelector("button");
+      if (btn) (byKey[btn.dataset.k] ||= {}).li = li;
+    });
+
     const tip = document.createElement("div");
     tip.className = "map-tip";
     tip.setAttribute("aria-hidden", "true");
-    mapWrap.appendChild(tip);
-    const pins = mapWrap.querySelectorAll(".pin");
-    const showTip = (pin) => {
-      pins.forEach((p) => p.classList.remove("active"));
-      pin.classList.add("active");
-      tip.innerHTML = `<strong>${pin.dataset.city}</strong> <span>· ${pin.dataset.country}</span>`;
-      const pr = pin.getBoundingClientRect();
-      const wr = mapWrap.getBoundingClientRect();
-      tip.style.left = `${pr.left + pr.width / 2 - wr.left}px`;
-      tip.style.top = `${pr.top - wr.top}px`;
-      tip.classList.add("visible");
+    wrap.appendChild(tip);
+
+    /* stato zoom (viewBox) */
+    const base = svg.dataset.base.split(" ").map(Number);
+    let z = 1;
+    let cx = base[2] / 2;
+    let cy = base[3] / 2;
+    const applyView = () => {
+      const w = base[2] / z;
+      const h = base[3] / z;
+      const half = { x: w / 2, y: h / 2 };
+      cx = Math.min(Math.max(cx, half.x), base[2] - half.x);
+      cy = Math.min(Math.max(cy, half.y), base[3] - half.y);
+      svg.setAttribute("viewBox", `${cx - half.x} ${cy - half.y} ${w} ${h}`);
+      const s = (1 / z).toFixed(4);
+      pins.forEach((p) => p.setAttribute("transform", `translate(${p.dataset.x} ${p.dataset.y}) scale(${s})`));
+      svg.style.touchAction = z > 1 ? "none" : "pan-y";
     };
-    const hideTip = () => {
-      tip.classList.remove("visible");
-      pins.forEach((p) => p.classList.remove("active"));
+    const clientToSvg = (e) => {
+      const r = svg.getBoundingClientRect();
+      if (!r.width || !r.height) return null;
+      const vb = svg.viewBox.baseVal;
+      return {
+        x: vb.x + ((e.clientX - r.left) / r.width) * vb.width,
+        y: vb.y + ((e.clientY - r.top) / r.height) * vb.height,
+      };
     };
-    pins.forEach((pin) => {
-      pin.addEventListener("pointerenter", () => showTip(pin));
-      pin.addEventListener("pointerleave", hideTip);
-      pin.addEventListener("focus", () => showTip(pin));
-      pin.addEventListener("blur", hideTip);
-      pin.addEventListener("click", (e) => { e.preventDefault(); showTip(pin); });
-      pin.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showTip(pin); }
-        if (e.key === "Escape") hideTip();
+    const zoomAt = (factor, at) => {
+      const nz = Math.min(8, Math.max(1, z * factor));
+      if (nz === z) return;
+      if (at) {
+        cx = at.x + (cx - at.x) * (z / nz);
+        cy = at.y + (cy - at.y) * (z / nz);
+      }
+      z = nz;
+      applyView();
+    };
+
+    svg.addEventListener("wheel", (e) => {
+      e.preventDefault();
+      zoomAt(e.deltaY < 0 ? 1.25 : 0.8, clientToSvg(e));
+    }, { passive: false });
+
+    mapBoard.querySelectorAll(".map-zoom button").forEach((b) => {
+      b.addEventListener("click", () => {
+        if (b.dataset.zoom === "in") zoomAt(1.4);
+        else if (b.dataset.zoom === "out") zoomAt(1 / 1.4);
+        else { z = 1; cx = base[2] / 2; cy = base[3] / 2; applyView(); }
       });
     });
-    document.addEventListener("click", (e) => {
-      if (!e.target.closest(".pin")) hideTip();
+
+    /* pan con trascinamento + pinch a due dita */
+    const pointers = new Map();
+    let pinchDist = 0;
+    let dragged = false;
+    svg.addEventListener("pointerdown", (e) => {
+      if (e.target.closest(".pin") && pointers.size === 0) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      dragged = false;
+      if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        pinchDist = Math.hypot(a.x - b.x, a.y - b.y);
+      }
+      svg.setPointerCapture?.(e.pointerId);
+      svg.classList.add("dragging");
+    });
+    svg.addEventListener("pointermove", (e) => {
+      if (!pointers.has(e.pointerId)) return;
+      const prev = pointers.get(e.pointerId);
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pointers.size === 1 && z > 1) {
+        const r = svg.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        const vb = svg.viewBox.baseVal;
+        cx -= ((e.clientX - prev.x) / r.width) * vb.width;
+        cy -= ((e.clientY - prev.y) / r.height) * vb.height;
+        if (Math.abs(e.clientX - prev.x) + Math.abs(e.clientY - prev.y) > 2) dragged = true;
+        applyView();
+      } else if (pointers.size === 2) {
+        const [a, b] = [...pointers.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (pinchDist > 0) zoomAt(d / pinchDist);
+        pinchDist = d;
+      }
+    });
+    ["pointerup", "pointercancel", "pointerleave"].forEach((ev) =>
+      svg.addEventListener(ev, (e) => {
+        pointers.delete(e.pointerId);
+        if (pointers.size < 2) pinchDist = 0;
+        if (pointers.size === 0) svg.classList.remove("dragging");
+      })
+    );
+
+    /* evidenziazione incrociata + tooltip "Guess + Città" */
+    const setActive = (k, on) => {
+      const rec = byKey[k] || {};
+      rec.pin?.classList.toggle("active", on);
+      rec.li?.classList.toggle("active", on);
+      if (on && rec.pin) {
+        tip.innerHTML = `<strong>Guess ${rec.pin.dataset.city}</strong>`;
+        const pr = rec.pin.getBoundingClientRect();
+        const wr = wrap.getBoundingClientRect();
+        tip.style.left = `${pr.left + pr.width / 2 - wr.left}px`;
+        tip.style.top = `${pr.top - wr.top}px`;
+        tip.classList.add("visible");
+      } else if (!on) {
+        tip.classList.remove("visible");
+      }
+    };
+    const clearActive = () => {
+      pins.forEach((p) => p.classList.remove("active"));
+      items.forEach((li) => li.classList.remove("active"));
+      tip.classList.remove("visible");
+    };
+
+    pins.forEach((pin) => {
+      const k = pin.dataset.k;
+      pin.addEventListener("pointerenter", () => { clearActive(); setActive(k, true); });
+      pin.addEventListener("pointerleave", () => setActive(k, false));
+      pin.addEventListener("focus", () => { clearActive(); setActive(k, true); });
+      pin.addEventListener("blur", () => setActive(k, false));
+      pin.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (dragged) return;
+        clearActive();
+        setActive(k, true);
+        byKey[k].li?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      });
+      pin.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); clearActive(); setActive(k, true); }
+        if (e.key === "Escape") clearActive();
+      });
+    });
+
+    items.forEach((li) => {
+      const btn = li.querySelector("button");
+      if (!btn) return;
+      const k = btn.dataset.k;
+      btn.addEventListener("pointerenter", () => { clearActive(); setActive(k, true); });
+      btn.addEventListener("pointerleave", () => setActive(k, false));
+      btn.addEventListener("focus", () => { clearActive(); setActive(k, true); });
+      btn.addEventListener("blur", () => setActive(k, false));
+      btn.addEventListener("click", () => { clearActive(); setActive(k, true); });
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") clearActive();
     });
   }
 

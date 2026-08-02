@@ -17,7 +17,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
 const HOST = "https://www.iconicoriginal.it";
 const LANGS = ["it", "en", "de"];
-const V = 6; // bump a ogni modifica di styles.css / script.js
+const V = 8; // bump a ogni modifica di styles.css / script.js
 
 /* ------------------------------------------------------------------ */
 /* Dizionari header/footer                                             */
@@ -52,38 +52,54 @@ const NAV = {
   ],
 };
 
+/* Footer: replica del footer di iconicwall.it (stesso layout, dati Iconic S.r.l.) */
 const FOOTER = {
   it: {
-    payoff: "Mantieni la storia, rinnova il design.",
-    claim: "Riqualificazione di interni senza demolizioni con Finiture 3M DI-NOC. Un unico interlocutore che progetta, coordina il cantiere e segue il risultato — in Italia e all'estero.",
+    introAria: "Iconic Original",
+    intro: "Riqualificazione di interni senza demolizioni<br>con Finiture 3M DI-NOC. Un unico interlocutore,<br>dall'idea all'inaugurazione.",
+    companyAria: "Iconic S.r.l.",
+    companyName: "ICONIC S.R.L. a socio unico",
+    address: "Via Guido Rossa, 39<br>35020 Ponte San Nicolò (PD)",
+    vat: "P.IVA / C.F. 04683100988",
     menuTitle: "Menu",
-    sedeTitle: "Sede",
+    legalTitle: "Legali",
+    socialTitle: "Social",
     legalPrivacy: "Privacy Policy",
     legalCookie: "Cookie Policy",
-    rights: "Tutti i diritti riservati",
-    family: "Parte del mondo Iconic insieme a",
+    rights: "Tutti i diritti riservati.",
+    tagline: "Progettato e realizzato in Italia",
     home: "Home",
   },
   en: {
-    payoff: "Keep the story, renew the design.",
-    claim: "Interior refurbishment without demolition with 3M DI-NOC architectural finishes. One single point of contact who designs, coordinates the works and follows the result through — in Italy and abroad.",
+    introAria: "Iconic Original",
+    intro: "Interior refurbishment without demolition<br>with 3M DI-NOC finishes. One point of contact,<br>from idea to opening.",
+    companyAria: "Iconic S.r.l.",
+    companyName: "ICONIC S.R.L. a socio unico",
+    address: "Via Guido Rossa, 39<br>35020 Ponte San Nicolò (PD), Italy",
+    vat: "VAT / Tax ID 04683100988",
     menuTitle: "Menu",
-    sedeTitle: "Headquarters",
-    legalPrivacy: "Privacy Policy",
-    legalCookie: "Cookie Policy",
-    rights: "All rights reserved",
-    family: "Part of the Iconic family together with",
+    legalTitle: "Legal",
+    socialTitle: "Social",
+    legalPrivacy: "Privacy Notice",
+    legalCookie: "Cookie Notice",
+    rights: "All rights reserved.",
+    tagline: "Progettato e realizzato in Italia",
     home: "Home",
   },
   de: {
-    payoff: "Bewahren Sie die Geschichte, erneuern Sie das Design.",
-    claim: "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Oberflächen. Ein einziger Ansprechpartner, der plant, die Baustelle koordiniert und das Ergebnis bis zur Übergabe begleitet — in Italien und im Ausland.",
+    introAria: "Iconic Original",
+    intro: "Innenraumsanierung ohne Abbruch<br>mit 3M DI-NOC Oberflächen. Ein Ansprechpartner,<br>von der Idee bis zur Eröffnung.",
+    companyAria: "Iconic S.r.l.",
+    companyName: "ICONIC S.R.L. a socio unico",
+    address: "Via Guido Rossa, 39<br>35020 Ponte San Nicolò (PD), Italien",
+    vat: "USt-IdNr. / St.-Nr. 04683100988",
     menuTitle: "Menü",
-    sedeTitle: "Firmensitz",
+    legalTitle: "Rechtliches",
+    socialTitle: "Social Media",
     legalPrivacy: "Datenschutzerklärung",
     legalCookie: "Cookie-Richtlinie",
-    rights: "Alle Rechte vorbehalten",
-    family: "Teil der Iconic Welt zusammen mit",
+    rights: "Alle Rechte vorbehalten.",
+    tagline: "Progettato e realizzato in Italia",
     home: "Home",
   },
 };
@@ -179,38 +195,70 @@ function footerHtml(lang) {
   const p = langPrefix(lang);
   const f = FOOTER[lang];
   const items = [["", f.home], ...NAV[lang]]
-    .map(([s, label]) => `<li><a href="${p}/${s ? s + "/" : ""}">${label}</a></li>`)
-    .join("\n          ");
+    .map(([s, label]) => `<a href="${p}/${s ? s + "/" : ""}">${label}</a>`)
+    .join("\n        ");
   return `<footer>
     <div class="footer-inner">
       <div class="footer-columns">
-        <div class="footer-column">
-          <p class="footer-brand"><img src="/assets/img/brand/iconic-logo-white.svg" alt="Iconic Original" width="145" height="63" loading="lazy"></p>
-          <div class="footer-intro"><p>${f.payoff}<br>${f.claim}</p></div>
-          <p class="footer-endorsed">
-            <img src="/assets/img/brand/logo-3m-endorsed.webp" alt="3M Endorsed Installer" width="120" height="76" loading="lazy">
-            <img src="/assets/img/brand/logo-3m-dinoc-bianco.webp" alt="3M DI-NOC Architectural Finishes" width="190" height="19" loading="lazy">
-          </p>
-        </div>
-        <div class="footer-column">
-          <h2>${f.menuTitle}</h2>
-          <ul class="footer-nav">
-          ${items}
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h2>${f.sedeTitle}</h2>
+        <section class="footer-column footer-intro" aria-label="${f.introAria}">
+          <a class="footer-brand footer-brand-wall" href="${p}/" aria-label="Iconic Original — home">
+            <img src="/assets/img/brand/iconic-logo-white.svg" alt="Logo Iconic Original" loading="lazy">
+          </a>
+          <p>${f.intro}</p>
+        </section>
+
+        <section class="footer-column footer-company" aria-label="${f.companyAria}">
+          <a class="footer-iconic-mark" href="${p}/" aria-label="Iconic">
+            <img src="/assets/img/brand/iconic-logo-white.svg" alt="Logo Iconic" loading="lazy">
+          </a>
+          <strong>${f.companyName}</strong>
           <ul class="footer-contact-list">
-            <li><span>Iconic Original<br>Zona artigianale Ciambèr<br>32012 Val di Zoldo (BL) — Italy</span></li>
-            <li><a href="tel:+390437794268">+39 0437 794268</a></li>
-            <li><a href="mailto:info@iconicoriginal.it">info@iconicoriginal.it</a></li>
-            <li class="footer-social"><a href="https://www.instagram.com/iconic_dressyourinteriors/" rel="noopener" target="_blank">Instagram — @iconic_dressyourinteriors</a></li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>${f.address}</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8M8 9h2"/></svg>
+              <span>${f.vat}</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4Z"/><path d="m22 6-10 7L2 6"/></svg>
+              <a href="mailto:info@iconicoriginal.it">info@iconicoriginal.it</a>
+            </li>
           </ul>
-        </div>
+        </section>
+
+        <nav class="footer-column footer-nav" aria-label="${f.menuTitle}">
+          <h2>${f.menuTitle}</h2>
+        ${items}
+        </nav>
+
+        <nav class="footer-column footer-nav" aria-label="${f.legalTitle}">
+          <h2>${f.legalTitle}</h2>
+          <a href="${p}/privacy-policy/">${f.legalPrivacy}</a>
+          <a href="${p}/cookie-policy/">${f.legalCookie}</a>
+        </nav>
+
+        <nav class="footer-column footer-nav footer-social" aria-label="${f.socialTitle}">
+          <h2>${f.socialTitle}</h2>
+          <a href="https://www.instagram.com/iconicwall.it/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61591808465350" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.linkedin.com/company/iconicwall/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 11v6M8 8v.01M12 17v-6M12 14a3 3 0 0 1 6 0v3"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </nav>
       </div>
-      <div class="footer-legal">
-        <p>© ${new Date().getFullYear()} Iconic Original — ${f.rights} · <a href="${p}/privacy-policy/">${f.legalPrivacy}</a> · <a href="${p}/cookie-policy/">${f.legalCookie}</a></p>
-        <p>${f.family} <a href="https://www.iconicwall.it/" rel="noopener">IconicWall</a></p>
+
+      <div class="footer-bottom">
+        <span>© ${new Date().getFullYear()} Iconic S.r.l. a socio unico.<br>${f.rights}</span>
+        <span>${f.tagline}</span>
       </div>
     </div>
   </footer>`;
@@ -225,6 +273,8 @@ function localBusinessLd(lang) {
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${HOST}/#organization`,
     name: "Iconic Original",
+    legalName: "Iconic S.r.l. a socio unico",
+    vatID: "IT04683100988",
     url: `${HOST}/`,
     logo: `${HOST}/assets/img/brand/logo-iconic-schema.png`,
     image: `${HOST}/assets/img/ambienti/hall-hotel-restyling.webp`,

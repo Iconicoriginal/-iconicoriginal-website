@@ -1761,7 +1761,8 @@ footer a:focus-visible {
   background: var(--ink);
   color: rgba(242,240,235,.85);
 }
-.endorsed-band img { width: auto; height: 54px; }
+.endorsed-band img { width: auto; height: 54px; object-fit: contain; }
+.endorsed-band img[src*="endorsed"] { height: 82px; }
 .endorsed-band p { margin: 0; max-width: 34rem; font-size: .85rem; font-weight: 300; line-height: 1.6; }
 
 /* --- Elenco vantaggi (riusa problem-item look) --- */
@@ -1815,12 +1816,95 @@ footer a:focus-visible {
 }
 
 /* --- Mappa Europa interattiva (SVG inline) --- */
+.map-section.guess-map { padding-left: 0; padding-right: 0; }
+.map-section.guess-map .section-head { padding: 0 7vw; }
+.map-board {
+  display: grid;
+  grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
+  gap: 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.map-side {
+  border-right: 1px solid var(--line);
+  padding: 1.4rem 1.6rem 1.4rem 4vw;
+  max-height: 640px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.map-side .city-list {
+  margin: 0;
+  display: block;
+  border-top: 0;
+}
+.map-side .city-list li { display: block; padding: 0; border-bottom: 0; }
+.city-list button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem .2rem;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: none;
+  text-align: left;
+  font-size: .88rem;
+  cursor: pointer;
+  transition: color .2s, padding-left .25s;
+}
+.city-list button span {
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.city-list button:hover,
+.city-list button:focus-visible,
+.city-list li.active button {
+  color: var(--bronze-ink);
+  padding-left: .6rem;
+}
+.city-list li.active button { font-weight: 600; }
 .europe-map-wrap {
   position: relative;
-  max-width: 1000px;
-  margin: 3rem auto 0;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper-2);
 }
-.europe-map { display: block; width: 100%; height: auto; }
+.europe-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 640px;
+  touch-action: pan-y;
+  cursor: grab;
+}
+.europe-map.dragging { cursor: grabbing; }
+.map-zoom {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 4;
+  display: grid;
+  gap: .35rem;
+}
+.map-zoom button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  background: rgba(242, 240, 235, .95);
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.map-zoom button:hover { background: var(--ink); color: var(--paper); }
+.map-zoom button:focus-visible { outline: 2px solid var(--bronze); outline-offset: 2px; }
 .europe-map .land { fill: var(--bronze); opacity: .28; }
 .europe-map .pin {
   cursor: pointer;
@@ -1903,6 +1987,8 @@ footer a:focus-visible {
 }
 @media (max-width: 700px) {
   .europe-map-wrap { display: none; }
+  .map-board { grid-template-columns: 1fr; border-bottom: 0; }
+  .map-side { border-right: 0; max-height: none; padding: 0 7vw 1rem; }
   .numbers-grid { grid-template-columns: repeat(2, 1fr); }
   .numbers-grid .number-card:nth-child(odd) { border-left: 0; padding-left: 0; }
   .numbers-grid .number-card { padding-top: 1.4rem; }

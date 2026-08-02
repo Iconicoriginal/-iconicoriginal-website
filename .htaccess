@@ -1,0 +1,33 @@
+# Iconic Original — regole per hosting Apache (alternativa a Vercel).
+# HTTPS + www canonico e redirect 301 dai vecchi URL WordPress.
+RewriteEngine On
+
+# HTTP -> HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.iconicoriginal.it/$1 [R=301,L]
+
+# non-www -> www
+RewriteCond %{HTTP_HOST} ^iconicoriginal\.it$ [NC]
+RewriteRule ^(.*)$ https://www.iconicoriginal.it/$1 [R=301,L]
+
+# Vecchi URL WordPress -> nuove pagine
+RedirectMatch 301 ^/sistema-modulare-iconic/?.*$ https://www.iconicoriginal.it/sistema-modulare-magnetico/
+RedirectMatch 301 ^/portfolio-item/.*$ https://www.iconicoriginal.it/realizzazioni/
+RedirectMatch 301 ^/portfolio_category/.*$ https://www.iconicoriginal.it/realizzazioni/
+RedirectMatch 301 ^/exhibitions/?.*$ https://www.iconicoriginal.it/realizzazioni/
+RedirectMatch 301 ^/stories/?.*$ https://www.iconicoriginal.it/realizzazioni/
+RedirectMatch 301 ^/modulo-contatti/?.*$ https://www.iconicoriginal.it/contatti/
+RedirectMatch 301 ^/sample-page/?.*$ https://www.iconicoriginal.it/
+RedirectMatch 301 ^/realizzazioni/page/.*$ https://www.iconicoriginal.it/realizzazioni/
+RedirectMatch 301 ^/category/.*$ https://www.iconicoriginal.it/
+RedirectMatch 301 ^/tag/.*$ https://www.iconicoriginal.it/
+RedirectMatch 301 ^/author/.*$ https://www.iconicoriginal.it/chi-siamo/
+RedirectMatch 301 ^/wp-sitemap.*$ https://www.iconicoriginal.it/sitemap.xml
+
+# Cache lunga per gli asset statici
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>

@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.iconicoriginal.it/chi-siamo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/chi-siamo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/chi-siamo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/chi-siamo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/chi-siamo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/chi-siamo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/chi-siamo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/come-lavoro/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/come-lavoro/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/come-lavoro/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/come-lavoro/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/come-lavoro/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/come-lavoro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/come-lavoro/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/contatti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/contatti/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/contatti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/contatti/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/contatti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/contatti/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/cookie-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/cookie-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/cookie-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/"/>
+    <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/materiali/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/materiali/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/materiali/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/materiali/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/materiali/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/materiali/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/materiali/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/privacy-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/privacy-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/privacy-policy/"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/restyling/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/restyling/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/restyling/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/restyling/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/restyling/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/restyling/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/restyling/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/sistema-modulare-magnetico/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/sistema-modulare-magnetico/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/sistema-modulare-magnetico/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/sistema-modulare-magnetico/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/sistema-modulare-magnetico/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/sistema-modulare-magnetico/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/sistema-modulare-magnetico/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/asd-lotta-brescia/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/asd-lotta-brescia/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/asd-lotta-brescia/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/asd-lotta-brescia/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/asd-lotta-brescia/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/asd-lotta-brescia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/asd-lotta-brescia/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/casa-privata-haifa/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/casa-privata-haifa/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/casa-privata-haifa/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/casa-privata-haifa/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/casa-privata-haifa/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/casa-privata-haifa/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/casa-privata-haifa/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/eis-cafe-alberto-maisach/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/eis-cafe-alberto-maisach/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/eis-cafe-alberto-maisach/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/eis-cafe-alberto-maisach/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/fiorella-rubino/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/fiorella-rubino/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/fiorella-rubino/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/fiorella-rubino/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/fiorella-rubino/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/fiorella-rubino/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/fiorella-rubino/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/guess/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/guess/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/guess/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/guess/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/guess/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/guess/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/guess/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/motivi-rubano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/motivi-rubano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/motivi-rubano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/motivi-rubano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/motivi-rubano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/motivi-rubano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/motivi-rubano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/oltre/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/oltre/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/oltre/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/oltre/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/oltre/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/oltre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/oltre/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/palestra-mamiani-pinerolo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/palestra-mamiani-pinerolo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/palestra-mamiani-pinerolo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/palestra-mamiani-pinerolo/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/ristorante-la-cala-milano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/ristorante-la-cala-milano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/en/realizzazioni/ristorante-la-cala-milano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/ristorante-la-cala-milano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/de/realizzazioni/ristorante-la-cala-milano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/ristorante-la-cala-milano/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/ristorante-la-cala-milano/"/>
+    <priority>0.7</priority>
+  </url>
+</urlset>

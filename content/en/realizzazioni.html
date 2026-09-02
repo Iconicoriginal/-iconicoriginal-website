@@ -8,7 +8,7 @@
   "bodyClass": "dark-header"
 } -->
     <section class="hero-photo" style="min-height:70vh">
-      <img src="/assets/img/realizzazioni/guess-tournai-15.webp" alt="Guess store front in Tournai after the international restyling by Iconic Original" fetchpriority="high">
+      <img src="/assets/img/realizzazioni/guess-tournai-main.webp" alt="Guess store front in Tournai after the international restyling by Iconic Original" fetchpriority="high">
       <div class="hero-photo-content">
         <p class="hero-kicker">The projects</p>
         <h1 class="display">Projects in Italy<br>and <em>across Europe.</em></h1>
@@ -88,10 +88,40 @@
       <ul class="country-chips reveal">
         <li>Italy</li><li>Austria</li><li>France</li><li>Germany</li><li>Netherlands</li><li>Belgium</li><li>Luxembourg</li><li>Greece</li><li>Cyprus</li>
       </ul>
-      <figure class="map-figure reveal">
-        <img class="map-desktop" loading="lazy" decoding="async" src="/assets/img/brand/mappa-lavori.webp" alt="Map of Iconic Original sites: Italy, Luxembourg, France, Germany, Belgium, Greece, Cyprus and Israel">
-        <img class="map-mobile" loading="lazy" decoding="async" src="/assets/img/brand/mappa-lavori-mobile.webp" alt="Map of Iconic Original sites across Europe and Israel">
-      </figure>
+      <div class="work-map reveal" data-work-map data-locale="en">
+        <div class="work-map-stage">
+          <div class="work-map-viewport" tabindex="0" aria-label="Interactive map of Iconic Original projects. Zoom with the wheel or buttons and drag to move.">
+            <div class="work-map-canvas">
+              <img loading="lazy" decoding="async" src="/assets/img/brand/mappa-lavori.webp" alt="Map of Iconic Original projects across Europe and Israel">
+              <button class="work-map-pin" style="--x:46%;--y:53%" data-zone="italia" data-label="Italy" data-count="17" aria-label="Italy, 17 projects"><span>17</span></button>
+              <button class="work-map-pin" style="--x:45.8%;--y:41%" data-zone="austria" data-label="Austria" data-count="1" aria-label="Austria, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:31.5%;--y:40%" data-zone="francia" data-label="France" data-count="1" aria-label="France, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:45%;--y:26%" data-zone="germania" data-label="Germany" data-count="3" aria-label="Germany, 3 projects"><span>3</span></button>
+              <button class="work-map-pin" style="--x:36%;--y:22%" data-zone="paesi-bassi" data-label="Netherlands" data-count="4" aria-label="Netherlands, 4 projects"><span>4</span></button>
+              <button class="work-map-pin" style="--x:35.5%;--y:28%" data-zone="belgio" data-label="Belgium" data-count="1" aria-label="Belgium, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:38.5%;--y:34%" data-zone="lussemburgo" data-label="Luxembourg" data-count="1" aria-label="Luxembourg, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:71%;--y:76%" data-zone="grecia" data-label="Greece" data-count="1" aria-label="Greece, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:87.8%;--y:84.5%" data-zone="cipro" data-label="Cyprus" data-count="1" aria-label="Cyprus, 1 project"><span>1</span></button>
+              <button class="work-map-pin" style="--x:90.5%;--y:94%" data-zone="israele" data-label="Haifa" data-count="1" aria-label="Haifa, 1 project"><span>1</span></button>
+            </div>
+            <div class="work-map-tooltip" role="status" aria-live="polite"></div>
+            <div class="work-map-controls" aria-label="Map controls"><button type="button" data-map-action="in" aria-label="Zoom in">+</button><button type="button" data-map-action="out" aria-label="Zoom out">−</button><button type="button" data-map-action="reset" aria-label="Show full map">⌂</button></div>
+          </div>
+          <aside class="work-map-results" aria-live="polite">
+            <div class="work-map-intro"><span>Explore the map</span><h3>Select an area</h3><p>Hover over a point to see the project count. Click to zoom in and open the available galleries.</p></div>
+            <section data-zone-panel="italia" hidden><span>Italy · 17 projects</span><h3>Seven galleries</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>7 stores</small></a><a href="/en/realizzazioni/fiorella-rubino/"><b>Fiorella Rubino</b><small>3 stores</small></a><a href="/en/realizzazioni/oltre/"><b>Oltre</b><small>3 stores</small></a><a href="/en/realizzazioni/motivi-rubano/"><b>Motivi</b><small>Rubano</small></a><a href="/en/realizzazioni/ristorante-la-cala-milano/"><b>La Cala Restaurant</b><small>Milan</small></a><a href="/en/realizzazioni/palestra-mamiani-pinerolo/"><b>Mamiani Gym</b><small>Pinerolo</small></a><a href="/en/realizzazioni/asd-lotta-brescia/"><b>ASD Lotta</b><small>Brescia</small></a></section>
+            <section data-zone-panel="austria" hidden><span>Austria · 1 project</span><h3>Klagenfurt</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="francia" hidden><span>France · 1 project</span><h3>Paris</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="germania" hidden><span>Germany · 3 projects</span><h3>Three projects</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Berlin · Hamburg</small></a><a href="/en/realizzazioni/eis-cafe-alberto-maisach/"><b>Eis Café Alberto</b><small>Maisach</small></a></section>
+            <section data-zone-panel="paesi-bassi" hidden><span>Netherlands · 4 projects</span><h3>Four projects</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Amstelveen · Breda · The Hague · Utrecht</small></a></section>
+            <section data-zone-panel="belgio" hidden><span>Belgium · 1 project</span><h3>Tournai</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="lussemburgo" hidden><span>Luxembourg · 1 project</span><h3>Esch-sur-Alzette</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="grecia" hidden><span>Greece · 1 project</span><h3>Athens</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="cipro" hidden><span>Cyprus · 1 project</span><h3>Nicosia</h3><a href="/en/realizzazioni/guess/"><b>Guess</b><small>Open gallery</small></a></section>
+            <section data-zone-panel="israele" hidden><span>Haifa · 1 project</span><h3>Private home</h3><a href="/en/realizzazioni/casa-privata-haifa/"><b>Private home</b><small>Open gallery</small></a></section>
+          </aside>
+        </div>
+      </div>
     </section>
 
     <section class="cta-section section">

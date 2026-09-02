@@ -28,10 +28,12 @@ module.exports = async function handler(req, res) {
   }
 
   const body = parseBody(req);
+  if (String(body.website || "").trim()) {
+    return sendJson(res, 200, { ok: true });
+  }
   const payload = {
     full_name: String(body.full_name || "").trim().slice(0, 200),
     email: String(body.email || "").trim().slice(0, 200),
-    phone: String(body.phone || "").trim().slice(0, 50),
     message: String(body.message || "").trim().slice(0, 5000),
     lingua: String(body.lingua || "").trim().slice(0, 5),
     pagina: String(body.pagina || "").trim().slice(0, 200),

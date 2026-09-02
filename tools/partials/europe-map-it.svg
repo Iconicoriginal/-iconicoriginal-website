@@ -9,7 +9,7 @@
         <li><button type="button" data-k="breda" data-city="Breda">Breda <span>Paesi Bassi</span></button></li>
         <li><button type="button" data-k="denhaag" data-city="Den Haag">Den Haag <span>Paesi Bassi</span></button></li>
         <li><button type="button" data-k="utrecht" data-city="Utrecht">Utrecht <span>Paesi Bassi</span></button></li>
-        <li><button type="button" data-k="settimo" data-city="Settimo Torinese">Settimo Torinese <span>Italia</span></button></li>
+        <li><button type="button" data-k="settimo" data-city="Vicolungo">Vicolungo <span>Italia</span></button></li>
         <li><button type="button" data-k="amburgo" data-city="Amburgo">Amburgo <span>Germania</span></button></li>
         <li><button type="button" data-k="berlino" data-city="Berlino">Berlino <span>Germania</span></button></li>
         <li><button type="button" data-k="parigi" data-city="Parigi">Parigi <span>Francia</span></button></li>
@@ -33,7 +33,7 @@
       <g class="pin" tabindex="0" role="button" aria-label="Guess Breda — Paesi Bassi" data-k="breda" data-city="Breda" data-x="342.6" data-y="255.5" transform="translate(342.6 255.5)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
       <g class="pin" tabindex="0" role="button" aria-label="Guess Den Haag — Paesi Bassi" data-k="denhaag" data-city="Den Haag" data-x="330.0" data-y="241.5" transform="translate(330.0 241.5)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
       <g class="pin" tabindex="0" role="button" aria-label="Guess Utrecht — Paesi Bassi" data-k="utrecht" data-city="Utrecht" data-x="353.5" data-y="241.2" transform="translate(353.5 241.2)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
-      <g class="pin" tabindex="0" role="button" aria-label="Guess Settimo Torinese — Italia" data-k="settimo" data-city="Settimo Torinese" data-x="403.6" data-y="440.5" transform="translate(403.6 440.5)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
+      <g class="pin" tabindex="0" role="button" aria-label="Guess Vicolungo — Italia" data-k="settimo" data-city="Vicolungo" data-x="403.6" data-y="440.5" transform="translate(403.6 440.5)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
       <g class="pin" tabindex="0" role="button" aria-label="Guess Amburgo — Germania" data-k="amburgo" data-city="Amburgo" data-x="449.0" data-y="199.3" transform="translate(449.0 199.3)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
       <g class="pin" tabindex="0" role="button" aria-label="Guess Berlino — Germania" data-k="berlino" data-city="Berlino" data-x="518.6" data-y="228.9" transform="translate(518.6 228.9)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>
       <g class="pin" tabindex="0" role="button" aria-label="Guess Parigi — Francia" data-k="parigi" data-city="Parigi" data-x="293.0" data-y="333.8" transform="translate(293.0 333.8)"><circle class="halo" r="11"/><circle class="dot" r="5"/></g>

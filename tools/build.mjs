@@ -17,7 +17,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
 const HOST = "https://www.iconicoriginal.it";
 const LANGS = ["it", "en", "de"];
-const V = 8; // bump a ogni modifica di styles.css / script.js
+const V = 97; // bump a ogni modifica di styles.css / script.js
 
 /* ------------------------------------------------------------------ */
 /* Dizionari header/footer                                             */
@@ -29,6 +29,7 @@ const NAV = {
     ["realizzazioni", "Realizzazioni"],
     ["materiali", "Materiali"],
     ["sistema-modulare-magnetico", "Sistema modulare"],
+    ["per-progettisti", "Per progettisti"],
     ["chi-siamo", "Chi siamo"],
     ["contatti", "Contatti"],
   ],
@@ -55,7 +56,7 @@ const NAV = {
 /* Footer: replica del footer di iconicwall.it (stesso layout, dati Iconic S.r.l.) */
 const FOOTER = {
   it: {
-    introAria: "Iconic Original",
+    introAria: "Iconic",
     intro: "Riqualificazione di interni senza demolizioni<br>con Finiture 3M DI-NOC. Un unico interlocutore,<br>dall'idea all'inaugurazione.",
     companyAria: "Iconic S.r.l.",
     companyName: "ICONIC S.R.L. a socio unico",
@@ -71,7 +72,7 @@ const FOOTER = {
     home: "Home",
   },
   en: {
-    introAria: "Iconic Original",
+    introAria: "Iconic",
     intro: "Interior refurbishment without demolition<br>with 3M DI-NOC finishes. One point of contact,<br>from idea to opening.",
     companyAria: "Iconic S.r.l.",
     companyName: "ICONIC S.R.L. a socio unico",
@@ -87,7 +88,7 @@ const FOOTER = {
     home: "Home",
   },
   de: {
-    introAria: "Iconic Original",
+    introAria: "Iconic",
     intro: "Innenraumsanierung ohne Abbruch<br>mit 3M DI-NOC Oberflächen. Ein Ansprechpartner,<br>von der Idee bis zur Eröffnung.",
     companyAria: "Iconic S.r.l.",
     companyName: "ICONIC S.R.L. a socio unico",
@@ -158,7 +159,7 @@ function headerHtml(lang, slug) {
   const p = langPrefix(lang);
   const items = NAV[lang]
     .map(([s, label]) => {
-      const active = slug === s || (s === "realizzazioni" && slug.startsWith("realizzazioni/"));
+      const active = slug === s || (s === "realizzazioni" && slug.startsWith("realizzazioni/")) || (s === "per-progettisti" && slug.startsWith("per-progettisti/"));
       return `<a href="${p}/${s}/"${active ? ' class="active" aria-current="page"' : ""}>${label}</a>`;
     })
     .join("\n      ");
@@ -172,8 +173,8 @@ function headerHtml(lang, slug) {
 
   return `<a class="skip-link sr-only" href="#main">Skip</a>
   <header class="site-header">
-    <a class="brand" href="${p}/" aria-label="Iconic Original — home">
-      <img src="/assets/img/brand/iconic-logo-black.svg" alt="Iconic Original — Dress your interiors" width="115" height="50">
+    <a class="brand" href="${p}/" aria-label="Iconic — home">
+      <img src="/assets/img/brand/iconic-logo-black.svg" alt="Iconic — Dress your interiors" width="115" height="50">
     </a>
     <nav class="main-nav" aria-label="Principale">
       ${items}
@@ -191,7 +192,7 @@ function headerHtml(lang, slug) {
   </header>`;
 }
 
-function footerHtml(lang) {
+function footerHtml(lang, slug) {
   const p = langPrefix(lang);
   const f = FOOTER[lang];
   const items = [["", f.home], ...NAV[lang]]
@@ -200,13 +201,6 @@ function footerHtml(lang) {
   return `<footer>
     <div class="footer-inner">
       <div class="footer-columns">
-        <section class="footer-column footer-intro" aria-label="${f.introAria}">
-          <a class="footer-brand footer-brand-wall" href="${p}/" aria-label="Iconic Original — home">
-            <img src="/assets/img/brand/iconic-logo-white.svg" alt="Logo Iconic Original" loading="lazy">
-          </a>
-          <p>${f.intro}</p>
-        </section>
-
         <section class="footer-column footer-company" aria-label="${f.companyAria}">
           <a class="footer-iconic-mark" href="${p}/" aria-label="Iconic">
             <img src="/assets/img/brand/iconic-logo-white.svg" alt="Logo Iconic" loading="lazy">
@@ -223,7 +217,7 @@ function footerHtml(lang) {
             </li>
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4Z"/><path d="m22 6-10 7L2 6"/></svg>
-              <a href="mailto:info@iconicoriginal.it">info@iconicoriginal.it</a>
+              <a href="mailto:${slug === "contatti" ? "info@iconicwall.it" : "info@iconicoriginal.it"}">${slug === "contatti" ? "info@iconicwall.it" : "info@iconicoriginal.it"}</a>
             </li>
           </ul>
         </section>
@@ -258,7 +252,6 @@ function footerHtml(lang) {
 
       <div class="footer-bottom">
         <span>© ${new Date().getFullYear()} Iconic S.r.l. a socio unico.<br>${f.rights}</span>
-        <span>${f.tagline}</span>
       </div>
     </div>
   </footer>`;
@@ -267,12 +260,13 @@ function footerHtml(lang) {
 /* ------------------------------------------------------------------ */
 /* JSON-LD                                                             */
 /* ------------------------------------------------------------------ */
-function localBusinessLd(lang) {
+function localBusinessLd(lang, slug) {
+  const contactPage = slug === "contatti";
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${HOST}/#organization`,
-    name: "Iconic Original",
+    name: "Iconic",
     legalName: "Iconic S.r.l. a socio unico",
     vatID: "IT04683100988",
     url: `${HOST}/`,
@@ -285,17 +279,17 @@ function localBusinessLd(lang) {
         : lang === "de"
           ? "Innenraumsanierung ohne Abbrucharbeiten mit 3M DI-NOC Oberflächen, in Italien und im Ausland."
           : "Riqualificazione di interni senza demolizioni con Finiture 3M DI-NOC, in Italia e all'estero.",
-    telephone: "+39 0437 794268",
-    email: "info@iconicoriginal.it",
+    ...(contactPage ? {} : { telephone: "+39 0437 794268" }),
+    email: contactPage ? "info@iconicwall.it" : "info@iconicoriginal.it",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Zona artigianale Ciambèr",
-      addressLocality: "Val di Zoldo",
-      addressRegion: "BL",
-      postalCode: "32012",
+      streetAddress: contactPage ? "Via Guido Rossa, 39" : "Zona artigianale Ciambèr",
+      addressLocality: contactPage ? "Ponte San Nicolò" : "Val di Zoldo",
+      addressRegion: contactPage ? "PD" : "BL",
+      postalCode: contactPage ? "35020" : "32012",
       addressCountry: "IT",
     },
-    geo: { "@type": "GeoCoordinates", latitude: 46.3471, longitude: 12.1804 },
+    ...(contactPage ? {} : { geo: { "@type": "GeoCoordinates", latitude: 46.3471, longitude: 12.1804 } }),
     areaServed: ["IT", "FR", "DE", "AT", "NL", "LU", "BE", "GR", "CY", "IL"],
     sameAs: [
       "https://www.instagram.com/iconic_dressyourinteriors/",
@@ -335,7 +329,7 @@ function render(lang, slug, { meta, body }) {
   const xDefault = pages[slug]?.it ? pageUrl("it", slug) : url;
   const og = meta.ogImage ? `${HOST}${meta.ogImage}` : `${HOST}/assets/img/ambienti/hall-hotel-restyling.webp`;
 
-  const ld = [localBusinessLd(lang)];
+  const ld = [localBusinessLd(lang, slug)];
   const bc = breadcrumbLd(lang, slug, meta);
   if (bc) ld.push(bc);
   if (Array.isArray(meta.schema)) ld.push(...meta.schema);
@@ -356,7 +350,7 @@ function render(lang, slug, { meta, body }) {
 ${alternates}
   <link rel="alternate" hreflang="x-default" href="${xDefault}">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Iconic Original">
+  <meta property="og:site_name" content="Iconic">
   <meta property="og:locale" content="${OG_LOCALE[lang]}">
   <meta property="og:title" content="${esc(meta.title)}">
   <meta property="og:description" content="${esc(meta.description)}">
@@ -369,7 +363,21 @@ ${alternates}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Italiana&display=swap">
+  <link rel="stylesheet" href="/tokens.css?v=${V}">
   <link rel="stylesheet" href="/assets/css/styles.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/project-map.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/project-stage.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/restyling.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/materiali.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/iconicwall-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/about-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/contact-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/come-lavoro-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/works-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/guess-page.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/brand-case-pages.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/single-project-pages.css?v=${V}">
+  <link rel="stylesheet" href="/assets/css/progettisti-page.css?v=${V}">
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <script src="/assets/js/script.js?v=${V}" defer></script>
   ${ldTags}
@@ -379,7 +387,7 @@ ${alternates}
   <main id="main"${meta.bodyClass?.includes("dark-header") ? "" : ' class="page-main"'}>
 ${body}
   </main>
-  ${footerHtml(lang)}
+  ${footerHtml(lang, slug)}
 </body>
 </html>
 `;

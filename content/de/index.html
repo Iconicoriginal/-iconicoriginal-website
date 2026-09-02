@@ -17,6 +17,7 @@
 } -->
     <section class="hero-photo">
       <img src="/assets/img/ambienti/hall-hotel-restyling.webp" alt="Von Iconic Original erneuerte Hotelhalle mit Oberflächen in 3M DI-NOC Holzoptik" fetchpriority="high">
+      <video class="hero-photo-video" autoplay muted loop playsinline preload="metadata" poster="/assets/img/ambienti/hall-hotel-restyling.webp" aria-hidden="true"><source src="/assets/video/iconic-header-1920.webm" type="video/webm"></video>
       <div class="hero-photo-content">
         <p class="hero-kicker">3M DI-NOC Oberflächen · Ein Ansprechpartner</p>
         <h1 class="display">Interieur-Restyling<br>ohne <em>Abbruch.</em></h1>
@@ -80,14 +81,15 @@
         <h2 class="display small reveal">Was <em>wir tun.</em></h2>
         <p class="copy reveal">Drei Wege, einen Raum zu verwandeln — eine Philosophie: die Geschichte bewahren, das Design erneuern.</p>
       </div>
-      <div class="portal-grid">
+      <div class="portal-grid portal-grid-home">
         <a class="portal-card reveal" href="/de/restyling/">
           <img loading="lazy" decoding="async" src="/assets/img/ambienti/mobili-restyling.webp" alt="Mit 3M DI-NOC Oberfläche in Holzoptik beschichtetes Möbel während eines Iconic Original Restylings">
-          <div class="portal-copy"><span>01 · Restyling</span><h3>Neues Leben für Ihre Räume.</h3><p>Möbel, Türen, Wände und Oberflächen — beschichtet statt abgerissen.</p></div>
+          <div class="portal-copy"><span>01 · Restyling</span><h3>Dress your interiors.</h3><p>Wir erneuern Möbel, Türen, Wände und Oberflächen mit 3M DI-NOC Oberflächen – ganz ohne Abbrucharbeiten.</p></div>
         </a>
         <a class="portal-card reveal" href="/de/sistema-modulare-magnetico/">
-          <img loading="lazy" decoding="async" src="/assets/img/materiali/parete-marmo-legno-3m-dinoc.webp" alt="Modulare Dekorwand in Marmor- und Holzoptik des magnetischen Iconic Systems">
-          <div class="portal-copy"><span>02 · Magnetisches Modulsystem</span><h3>Dekorpaneele.</h3><p>Oberflächen zum Wechseln und Aktualisieren, ohne Bauarbeiten.</p></div>
+          <img loading="lazy" decoding="async" src="/assets/img/ambienti/iconicwall-living-magnetico.png" alt="Wohnraumwand mit dem magnetischen Modulsystem von Iconic Wall">
+          <img class="portal-brand-mark" src="/assets/img/brand/iconicwall-logo-white.svg" alt="Iconic Wall" loading="lazy">
+          <div class="portal-copy"><span>02 · Iconic Wall</span><h3>Magnetisches Modulsystem.</h3><p>Modulare Wände mit austauschbaren Magnetpaneelen, um Oberflächen und Kompositionen ohne Bauarbeiten zu aktualisieren.</p></div>
         </a>
         <a class="portal-card reveal" href="/de/come-lavoro/">
           <img loading="lazy" decoding="async" src="/assets/img/ambienti/render-negozio-restyling.webp" alt="Ladenbau-Restyling: Rendering eines Iconic Original Projekts">
@@ -96,48 +98,63 @@
       </div>
     </section>
 
-    <section class="full-bleed" data-parallax>
-      <img loading="lazy" decoding="async" class="full-bleed-fit" src="/assets/img/realizzazioni/guess-tournai-15.webp" alt="Guess Storefront in Tournai, erneuert von Iconic Original mit 3M DI-NOC Oberflächen">
-      <h2 class="full-bleed-title reveal">Man beschichtet einfach.</h2>
+    <section class="project-map-section" aria-labelledby="project-map-title-de">
+      <div class="project-map-intro">
+        <h2 id="project-map-title-de">Wo wir gearbeitet haben.</h2>
+        <p>Von den Dolomiten aus bringt Iconic Original seine Erfahrung in Geschäfte, Hotels, Restaurants und professionelle Räume in ganz Europa. Jeder Punkt auf der Karte steht für ein konkretes Projekt: Innenräume, die ohne Abbrucharbeiten verwandelt wurden – mit einer Methode, die sich an unterschiedliche Orte, Identitäten und Anforderungen anpasst. <a class="project-map-archive" href="/de/realizzazioni/">Alle Projekte <span aria-hidden="true">↗</span></a></p>
+      </div>
+      <div class="project-map" data-project-map data-locale="de">
+        <div class="project-map-viewport" tabindex="0" aria-label="Interaktive Karte der Iconic Original Projekte. Mit Plus und Minus zoomen, mit den Pfeiltasten verschieben.">
+          <p class="project-map-loading" role="status">Karte wird geladen…</p>
+          <div class="project-map-tooltip" role="tooltip" hidden></div>
+          <div class="project-map-controls" aria-label="Kartensteuerung">
+            <button type="button" data-project-map-action="left" data-project-map-pan aria-label="Nach links verschieben">←</button>
+            <button type="button" data-project-map-action="up" data-project-map-pan aria-label="Nach oben verschieben">↑</button>
+            <button type="button" data-project-map-action="down" data-project-map-pan aria-label="Nach unten verschieben">↓</button>
+            <button type="button" data-project-map-action="right" data-project-map-pan aria-label="Nach rechts verschieben">→</button>
+            <label class="project-map-zoom"><span class="sr-only">Zoomstufe</span><input type="range" min="1" max="6" step="0.1" value="1" data-project-map-zoom aria-label="Zoomstufe"></label>
+            <button type="button" data-project-map-action="fit" aria-label="Karte an Grenzen anpassen">⛶</button>
+          </div>
+          <small class="project-map-credit">Grenzen: Natural Earth · geoBoundaries CC BY 3.0</small>
+        </div>
+      </div>
     </section>
 
-    <section class="map-section">
-      <div class="section-head">
-        <h2 class="display small reveal">Wo wir gearbeitet <em>haben.</em></h2>
-        <p class="copy reveal">Der Firmensitz liegt in Val di Zoldo, in den Belluneser Dolomiten. Unsere Baustellen sind überall dort, wo ein Raum verwandelt werden will: neun Länder, eine Arbeitsweise — plus ein Projekt jenseits des Mittelmeers, in Haifa.</p>
+    <section class="project-stage-section" aria-labelledby="project-stage-title-de">
+      <header class="project-stage-intro">
+        <h2 id="project-stage-title-de">Interieurs, die wir neu eingekleidet haben.</h2>
+        <p>Jeder Raum beginnt mit einer eigenen Identität und einer anderen Anforderung. Hier zeigen wir Verwandlungen aus Retail, Hospitality, Wellness und privaten Innenräumen: Projekte, die die Wahrnehmung eines Ortes grundlegend verändern, das Bestehende bewahren und es durch Oberflächen, Materialien und sorgfältig ausgearbeitete Details aufwerten.</p>
+      </header>
+      <div class="project-stage" data-project-stage>
+      <div class="project-stage-media" aria-hidden="true">
+        <img class="is-active" data-stage-image="0" loading="lazy" decoding="async" src="/assets/img/realizzazioni/guess-parigi-37.webp" alt="">
+        <img data-stage-image="1" loading="lazy" decoding="async" src="/assets/img/realizzazioni/eis-cafe-alberto-maisach-23.webp" alt="">
+        <img data-stage-image="2" loading="lazy" decoding="async" src="/assets/img/realizzazioni/palestra-mamiani-pinerolo-cover.webp" alt="">
+        <img data-stage-image="3" loading="lazy" decoding="async" src="/assets/img/realizzazioni/fiorella-rubino-cover.webp" alt="">
+        <img data-stage-image="4" loading="lazy" decoding="async" src="/assets/img/realizzazioni/oltre-cover.webp" alt="">
+        <img data-stage-image="5" loading="lazy" decoding="async" src="/assets/img/realizzazioni/ristorante-la-cala-milano-cover.webp" alt="">
+        <img data-stage-image="6" loading="lazy" decoding="async" src="/assets/img/realizzazioni/casa-privata-haifa-cover.webp" alt="">
+        <img data-stage-image="7" loading="lazy" decoding="async" src="/assets/img/realizzazioni/motivi-rubano-01.webp" alt="">
+        <img data-stage-image="8" loading="lazy" decoding="async" src="/assets/img/realizzazioni/asd-lotta-brescia-12.webp" alt="">
       </div>
-      <ul class="country-chips reveal">
-        <li>Italien</li><li>Österreich</li><li>Frankreich</li><li>Deutschland</li><li>Niederlande</li><li>Belgien</li><li>Luxemburg</li><li>Griechenland</li><li>Zypern</li>
-      </ul>
-      <figure class="map-figure reveal">
-        <img class="map-desktop" loading="lazy" decoding="async" src="/assets/img/brand/mappa-lavori.webp" alt="Karte der Iconic Original Restyling-Projekte in Europa und Israel">
-        <img class="map-mobile" loading="lazy" decoding="async" src="/assets/img/brand/mappa-lavori-mobile.webp" alt="Karte der Iconic Original Restyling-Projekte in Europa und Israel">
-      </figure>
-      <div class="reveal" style="margin-top:2.5rem"><a class="button" href="/de/realizzazioni/">Alle Projekte <span>↗</span></a></div>
+      <div class="project-stage-shade" aria-hidden="true"></div>
+      <nav class="project-stage-list" aria-label="Ausgewählte Projekte">
+        <a class="project-stage-item is-active" data-stage-trigger="0" href="/de/realizzazioni/guess/"><span>01</span><strong>Guess</strong><small>Retail · Europa</small></a>
+        <a class="project-stage-item" data-stage-trigger="1" href="/de/realizzazioni/eis-cafe-alberto-maisach/"><span>02</span><strong>Eis Café Alberto</strong><small>Hospitality · Maisach</small></a>
+        <a class="project-stage-item" data-stage-trigger="2" href="/de/realizzazioni/palestra-mamiani-pinerolo/"><span>03</span><strong>Mamiani Studio</strong><small>Wellness · Pinerolo</small></a>
+        <a class="project-stage-item" data-stage-trigger="3" href="/de/realizzazioni/fiorella-rubino/"><span>04</span><strong>Fiorella Rubino</strong><small>Retail · Italien</small></a>
+        <a class="project-stage-item" data-stage-trigger="4" href="/de/realizzazioni/oltre/"><span>05</span><strong>Oltre</strong><small>Retail · Italien</small></a>
+        <a class="project-stage-item" data-stage-trigger="5" href="/de/realizzazioni/ristorante-la-cala-milano/"><span>06</span><strong>Restaurant La Cala</strong><small>Hospitality · Mailand</small></a>
+        <a class="project-stage-item" data-stage-trigger="6" href="/de/realizzazioni/casa-privata-haifa/"><span>07</span><strong>Privathaus</strong><small>Wohnen</small></a>
+        <a class="project-stage-item" data-stage-trigger="7" href="/de/realizzazioni/motivi-rubano/"><span>08</span><strong>Motivi</strong><small>Retail · Rubano</small></a>
+        <a class="project-stage-item" data-stage-trigger="8" href="/de/realizzazioni/asd-lotta-brescia/"><span>09</span><strong>ASD Lotta</strong><small>Fitness · Brescia</small></a>
+      </nav>
+      <a class="project-stage-archive" href="/de/realizzazioni/">Alle Projekte <span aria-hidden="true">↗</span></a>
+      <span class="project-stage-cursor" aria-hidden="true">Entdecken</span>
+      </div>
     </section>
 
     <section class="section">
-      <div class="section-head">
-        <h2 class="display small reveal">Die Interieurs, die wir<br><em>eingekleidet haben.</em></h2>
-        <p class="copy reveal">Internationale Marken, Restaurants, Fitnessstudios und Privathäuser: Jedes Projekt erzählt eine Verwandlung ohne Abbruch.</p>
-      </div>
-      <div class="projects-grid">
-        <a class="project-card reveal" href="/de/realizzazioni/guess/">
-          <img loading="lazy" decoding="async" src="/assets/img/realizzazioni/guess-parigi-37.webp" alt="Kassenbereich des Guess Stores in Paris mit Wandverkleidung in 3M DI-NOC Nussbaumoptik">
-          <figcaption><strong>Guess</strong><span>19 Stores · 9 Länder</span></figcaption>
-        </a>
-        <a class="project-card reveal" href="/de/realizzazioni/eis-cafe-alberto-maisach/">
-          <img loading="lazy" decoding="async" src="/assets/img/realizzazioni/eis-cafe-alberto-maisach-23.webp" alt="Eis Café Alberto in Maisach mit roten Sitzbänken und hinterleuchteten Wänden nach dem Restyling">
-          <figcaption><strong>Eis Café Alberto</strong><span>Maisach · Deutschland</span></figcaption>
-        </a>
-        <a class="project-card reveal" href="/de/realizzazioni/palestra-mamiani-pinerolo/">
-          <img loading="lazy" decoding="async" src="/assets/img/realizzazioni/palestra-mamiani-pinerolo-cover.webp" alt="Mamiani Fitnessstudio in Pinerolo mit Iconic Original Grafiken und Beschichtungen">
-          <figcaption><strong>Mamiani Studio</strong><span>Pinerolo · Italien</span></figcaption>
-        </a>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:0">
       <div class="section-head">
         <h2 class="display small reveal">Die <em>Vorteile.</em></h2>
       </div>
@@ -165,7 +182,12 @@
       </div>
     </section>
 
-    <section class="section" style="padding-top:0">
+    <section class="full-bleed" data-parallax>
+      <img loading="lazy" decoding="async" class="full-bleed-fit" src="/assets/img/realizzazioni/guess-tournai-main.webp" alt="Guess Storefront in Tournai, erneuert von Iconic Original mit 3M DI-NOC Oberflächen">
+      <h2 class="full-bleed-title reveal">Man beschichtet einfach.</h2>
+    </section>
+
+    <section class="section">
       <div class="section-head">
         <h2 class="display small reveal">Für wen wir <em>arbeiten.</em></h2>
       </div>
@@ -190,7 +212,7 @@
       <p class="reveal">Iconic Original · Dress your interiors</p>
     </section>
 
-    <section class="cta-section section">
+    <section class="cta-section home-final-cta section">
       <p class="eyebrow reveal" style="justify-content:center">Projekt starten</p>
       <h2 class="display reveal">Erzählen Sie uns von Ihrem<br><em>nächsten Projekt.</em></h2>
       <a class="button light reveal" href="/de/contatti/">Sprechen wir darüber <span>↗</span></a>

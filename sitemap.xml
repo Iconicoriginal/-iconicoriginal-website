@@ -127,6 +127,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.iconicoriginal.it/per-progettisti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/per-progettisti/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.iconicoriginal.it/privacy-policy/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/privacy-policy/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/privacy-policy/"/>
@@ -209,6 +214,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/sistema-modulare-magnetico/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/sistema-modulare-magnetico/"/>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/per-progettisti/rivestire-una-porta/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/per-progettisti/rivestire-una-porta/"/>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.iconicoriginal.it/realizzazioni/asd-lotta-brescia/</loc>
@@ -397,6 +407,11 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/ristorante-la-cala-milano/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.iconicoriginal.it/en/realizzazioni/ristorante-la-cala-milano/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.iconicoriginal.it/de/realizzazioni/ristorante-la-cala-milano/"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.iconicoriginal.it/realizzazioni/savhotel-mantegna-padova/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.iconicoriginal.it/realizzazioni/savhotel-mantegna-padova/"/>
     <priority>0.7</priority>
   </url>
 </urlset>

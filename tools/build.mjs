@@ -59,7 +59,7 @@ const FOOTER = {
     introAria: "Iconic",
     intro: "Riqualificazione di interni senza demolizioni<br>con Finiture 3M DI-NOC. Un unico interlocutore,<br>dall'idea all'inaugurazione.",
     companyAria: "Iconic S.r.l.",
-    companyName: "ICONIC S.R.L. a socio unico",
+    companyName: "Iconic Srl",
     address: "Via Guido Rossa, 39<br>35020 Ponte San Nicolò (PD)",
     vat: "P.IVA / C.F. 04683100988",
     menuTitle: "Menu",
@@ -251,7 +251,7 @@ function footerHtml(lang, slug) {
       </div>
 
       <div class="footer-bottom">
-        <span>© ${new Date().getFullYear()} Iconic S.r.l. a socio unico.<br>${f.rights}</span>
+        <span>© ${new Date().getFullYear()} Iconic Srl.<br>${f.rights}</span>
       </div>
     </div>
   </footer>`;
@@ -267,7 +267,7 @@ function localBusinessLd(lang, slug) {
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${HOST}/#organization`,
     name: "Iconic",
-    legalName: "Iconic S.r.l. a socio unico",
+    legalName: "Iconic Srl",
     vatID: "IT04683100988",
     url: `${HOST}/`,
     logo: `${HOST}/assets/img/brand/logo-iconic-schema.png`,

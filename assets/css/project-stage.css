@@ -201,5 +201,5 @@
   .project-stage-cursor { display: none; }
 }
 
-html { scroll-snap-type: y proximity; }
+body[data-page="home"] { scroll-snap-type: y proximity; }
 .project-stage-section { scroll-snap-align: start; scroll-snap-stop: always; }

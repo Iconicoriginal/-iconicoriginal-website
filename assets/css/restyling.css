@@ -166,6 +166,10 @@ body[data-page="restyling"] > main > .section:has(.advantage-grid) .section-head
   overflow-wrap: anywhere;
   min-width: 0;
 }
+body[data-page="restyling"] .section-light-after-bleed {
+  background: var(--color-paper) !important;
+  color: var(--color-ink) !important;
+}
 body[data-page="restyling"] > main > .section .advantage-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;

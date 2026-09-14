@@ -170,6 +170,8 @@ body[data-page="restyling"] .section-light-after-bleed {
   background: var(--color-paper) !important;
   color: var(--color-ink) !important;
 }
+body[data-page="restyling"] .section-light-after-bleed .display { color: var(--color-ink) !important; }
+body[data-page="restyling"] .section-light-after-bleed .copy { color: var(--color-ink-soft) !important; }
 body[data-page="restyling"] > main > .section .advantage-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;

@@ -307,7 +307,7 @@ button, input, textarea, select { font: inherit; }
   transition: none;
 }
 .display.small { font-size: clamp(3.2rem, 5.5vw, 6rem); }
-.display em, .serif em { color: inherit; font-style: normal; }
+.display em, .serif em { color: var(--bronze); font-style: normal; }
 .home-hero .display em,
 .cta-section .display em,
 .hero-photo .display em,
@@ -399,7 +399,7 @@ button, input, textarea, select { font: inherit; }
 .full-bleed img.full-bleed-fit {
   height: 115%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center center;
   background: transparent;
 }
 .full-bleed-title {
@@ -1679,7 +1679,7 @@ footer a:focus-visible {
   display: grid;
   gap: .35rem;
 }
-.pledge-point h3 { margin: 0; font: 400 1.25rem var(--serif); letter-spacing: .02em; }
+.pledge-point h3 { margin: 0; font: 400 clamp(1.4rem, 1.8vw, 1.7rem) var(--serif); letter-spacing: .02em; }
 .pledge-point p { margin: 0; font-size: .9rem; font-weight: 300; color: rgba(242,240,235,.72); line-height: 1.6; }
 
 /* --- Metodo / Come lavoro --- */

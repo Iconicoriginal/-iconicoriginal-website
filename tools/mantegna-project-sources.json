@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-22",
-  "status": "Revisione parziale: fotografie bagni e codici per gli altri ambienti ancora da documentare",
+  "status": "Finiture confermate da Yuri il 22 settembre 2026 e inserite nella pagina; album iCloud esaminato, download originali non riuscito",
   "assets": [
     {
       "source_name": "IMG_1467.JPEG",
@@ -29,6 +29,24 @@
         "Tre giorni di lavoro",
         "Ristorante operativo"
       ]
+    },
+    {
+      "code": "PS-503",
+      "brand": "3M DI-NOC",
+      "area": "Porte bagni piani 1 e 13",
+      "source": "Indicazione diretta di Yuri in chat, 2026-09-22"
+    },
+    {
+      "code": "PW-2320",
+      "brand": "3M DI-NOC",
+      "area": "Porte camere lato esterno e parti in legno",
+      "source": "Indicazione diretta di Yuri in chat, 2026-09-22"
+    },
+    {
+      "code": "PS-885",
+      "brand": "3M DI-NOC",
+      "area": "Porte camere lato interno, armadi e altre porte zone comuni",
+      "source": "Indicazione diretta di Yuri in chat, 2026-09-22"
     }
   ],
   "user_confirmed_scope": [
@@ -39,19 +57,24 @@
     "10 piani con IconicWall, 90 pannelli"
   ],
   "missing": [
-    "Codici finitura di armadi e porte camera, bagni piani 1 e 13, pannelli corridoi e salotto",
-    "Foto identificate delle porte dei bagni ai piani 1 e 13"
+    "Acquisire le foto originali dei bagni dall’album iCloud, con associazione al piano quando verificabile"
   ],
   "editorial_rules": [
     "Prima/dopo con cursore trascinabile, mai fotografie affiancate",
     "Il progetto hall IconicWall nei documenti è una proposta: non descriverlo come opera completata",
-    "Non estendere PW-2320 dal ristorante agli altri ambienti senza evidenza",
     "Le foto camera documentano il contesto complessivo; non attribuire tutto il restyling a Iconic",
     "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati"
   ],
   "research_folders": [
     "https://drive.google.com/drive/folders/1Qd_uME1kQ9O13Fa5H0AnNJuGhq-4TGxm",
     "https://drive.google.com/drive/folders/1F4kqTJTEMiQMRcWQvvFw4NAtTcRVSAEI",
-    "https://drive.google.com/drive/folders/1AVoahslnXLeCx81bgmQ-q02Of6wSuig_"
-  ]
+    "https://drive.google.com/drive/folders/1AVoahslnXLeCx81bgmQ-q02Of6wSuig_",
+    "https://photos.icloud.com/shared/album/09fdoCb7CK02YDrqACNokHgqQ"
+  ],
+  "icloud_album_review": {
+    "item_count": 640,
+    "reviewed": "2026-09-22",
+    "observed": "Foto e video camere, armadi, corridoi, porte ristorante e lavorazioni bagni. Fotografie bagni visualizzate tra elementi 9 e 15; IMG_5398 identificata tramite pannello Info. Non assegnare un piano specifico dalla sola vista.",
+    "download_status": "Download album, download foto e salvataggio media non hanno restituito un file utilizzabile nella sessione. Nessuna nuova foto iCloud inserita nella pagina."
+  }
 }

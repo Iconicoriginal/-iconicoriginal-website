@@ -145,7 +145,10 @@
 .m-film-switch button{background:none;border:0;border-bottom:1px solid #ffffff40;color:var(--m-muted);font:inherit;font-size:1rem;min-height:48px;padding:.6rem 0;cursor:pointer}
 .m-film-switch button[aria-pressed=true]{color:#e0c5a3;border-color:currentColor}
 .m-single-film{display:block;width:100%;height:min(75svh,740px);background:#0b0b0a;object-fit:contain}
+.m-material-layout>figure{height:auto;align-self:start;position:sticky;top:5rem}
+.m-material-layout>figure img{height:auto;max-height:85svh;object-fit:contain}
 @media(max-width:700px){
+ .m-material-layout>figure{position:static}
  .m-chapters{grid-template-columns:1fr}
  .m-room-story>figure img,.m-salotto>figure img{max-height:none}
  .m-room-wide{padding:0 6vw 2rem}

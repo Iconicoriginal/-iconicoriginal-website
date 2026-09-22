@@ -382,7 +382,7 @@ ${meta.bodyClass?.includes("home-page") ? `<link rel="stylesheet" href="/assets/
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <script src="/assets/js/script.js?v=${V}" defer></script>
 ${meta.bodyClass?.includes("guess-editorial") ? `<link rel="stylesheet" href="/assets/css/guess-editorial.css?v=${V}"><script src="/assets/js/guess-editorial.js?v=${V}" defer></script>` : ""}${meta.bodyClass?.includes("mantegna-editorial") ? `
-<link rel="stylesheet" href="/assets/css/mantegna-editorial.css?v=10"><script src="/assets/js/mantegna-editorial.js?v=2" defer></script>` : ""}
+<link rel="stylesheet" href="/assets/css/mantegna-editorial.css?v=11"><script src="/assets/js/mantegna-editorial.js?v=2" defer></script>` : ""}
   ${ldTags}
 </head>
 <body${meta.bodyClass ? ` class="${meta.bodyClass}"` : ""} data-page="${slug}">

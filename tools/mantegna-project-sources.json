@@ -1,0 +1,57 @@
+{
+  "updated": "2026-09-22",
+  "status": "Revisione parziale: fotografie bagni e codici per gli altri ambienti ancora da documentare",
+  "assets": [
+    {
+      "source_name": "IMG_1467.JPEG",
+      "source_url": "https://drive.google.com/file/d/1wdj7a5Da2-D7kCVzRM_DZZPWr5ZzMAIK/view?usp=drivesdk",
+      "source_folder": "Hotel Mantegna / Foto per pagina mantegna"
+    },
+    {
+      "source_name": "IMG_1469.JPEG",
+      "source_url": "https://drive.google.com/file/d/1ByhOri3pRgRhV6GGEgCHmh5vSS-P9le4/view?usp=drivesdk",
+      "source_folder": "Hotel Mantegna / Foto per pagina mantegna"
+    },
+    {
+      "source_name": "IMG_1463.JPEG",
+      "source_url": "https://drive.google.com/file/d/1PVO_xqT0sidCrUfyd7Cm3XpemKgHRcqh/view?usp=drivesdk",
+      "source_folder": "Hotel Mantegna / Foto per pagina mantegna"
+    }
+  ],
+  "material_evidence": [
+    {
+      "area": "Porte scorrevoli accesso ristorante",
+      "brand": "3M DI-NOC",
+      "code": "PW-2320",
+      "source_url": "https://drive.google.com/file/d/1nBlyQ4gkkmCiJ1bpn_mBvGoATZ8t3R7W/view?usp=drivesdk",
+      "facts": [
+        "Due porte scorrevoli",
+        "Tre giorni di lavoro",
+        "Ristorante operativo"
+      ]
+    }
+  ],
+  "user_confirmed_scope": [
+    "190 camere: armadi e porte ingresso",
+    "Porte bagni piano 1",
+    "Porte bagni piano 13",
+    "Porte accesso ristorante",
+    "10 piani con IconicWall, 90 pannelli"
+  ],
+  "missing": [
+    "Codici finitura di armadi e porte camera, bagni piani 1 e 13, pannelli corridoi e salotto",
+    "Foto identificate delle porte dei bagni ai piani 1 e 13"
+  ],
+  "editorial_rules": [
+    "Prima/dopo con cursore trascinabile, mai fotografie affiancate",
+    "Il progetto hall IconicWall nei documenti è una proposta: non descriverlo come opera completata",
+    "Non estendere PW-2320 dal ristorante agli altri ambienti senza evidenza",
+    "Le foto camera documentano il contesto complessivo; non attribuire tutto il restyling a Iconic",
+    "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati"
+  ],
+  "research_folders": [
+    "https://drive.google.com/drive/folders/1Qd_uME1kQ9O13Fa5H0AnNJuGhq-4TGxm",
+    "https://drive.google.com/drive/folders/1F4kqTJTEMiQMRcWQvvFw4NAtTcRVSAEI",
+    "https://drive.google.com/drive/folders/1AVoahslnXLeCx81bgmQ-q02Of6wSuig_"
+  ]
+}

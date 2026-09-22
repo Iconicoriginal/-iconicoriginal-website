@@ -115,3 +115,44 @@
 .m-hero-content,.m-closing>div,.m-closing>.m-link{position:relative;z-index:2}
 .mantegna-editorial .m-hero .breadcrumbs{padding:0}
 .mantegna-editorial .site-header.scrolled{background:#f2f0eb;color:#171715}
+
+/* Photographic chapters and a single draggable comparison. */
+.m-chapters{grid-template-columns:repeat(3,1fr);row-gap:.6rem}
+.m-room-story>.m-heading,.m-salotto>.m-heading{margin-bottom:0}
+.m-room-story>figure img,.m-salotto>figure img{width:100%;max-height:90svh;object-fit:cover}
+.m-room-story>figure figcaption,.m-salotto>figure figcaption{padding:1rem 6vw}
+.m-room-story .m-room-copy h3{margin-bottom:2rem}
+.m-room-wide{padding:0 6vw 3rem}
+.m-room-wide img{width:100%;max-height:85svh;object-fit:cover}
+.m-comparison-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center}
+.m-comparison{position:relative;aspect-ratio:3/4;background:#252421;isolation:isolate;overflow:hidden;touch-action:pan-y}
+.m-comparison>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;user-select:none;pointer-events:none}
+.m-comparison-before{clip-path:inset(0 calc(100% - var(--reveal)) 0 0)}
+.m-compare-label{position:absolute;top:1rem;padding:.4rem .8rem;background:#171715d9;color:#fff;font-size:.875rem;pointer-events:none}
+.m-before-label{left:1rem}.m-after-label{right:1rem}
+.m-comparison-handle{position:absolute;inset:0 auto 0 var(--reveal);width:2px;background:#fff;transform:translateX(-50%);pointer-events:none}
+.m-comparison-handle>span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:52px;height:52px;background:#f2f0eb;color:#171715;border-radius:50%;box-shadow:0 0 0 1px #17171540;font-size:1.7rem}
+.m-comparison input[type=range]{position:absolute;inset:0;display:block;width:100%;height:100%;margin:0;padding:0;opacity:0;cursor:ew-resize;appearance:none;background:transparent;touch-action:pan-y}
+.m-comparison input::-webkit-slider-thumb{appearance:none;width:1px;height:100%}
+.m-comparison input::-moz-range-thumb{width:1px;height:100%;border:0}
+.m-comparison:focus-within{outline:3px solid #baa184;outline-offset:6px}
+.m-comparison-copy>p:not(.m-label){color:var(--m-muted);margin:1.5rem 0}
+.m-facts{margin:2rem 0 0}.m-facts>div{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem;border-top:1px solid #ffffff30;padding:1rem 0;font-size:.9375rem;line-height:1.5}.m-facts dt{color:var(--m-accent)}.m-facts dd{margin:0}
+.m-bathrooms{border-top:1px solid #ffffff30}
+.m-bathrooms .m-heading{margin-bottom:0}
+.m-floor-list{margin:2rem 0 0}.m-floor-list>div{display:flex;align-items:center;gap:1.5rem;border-top:1px solid #ffffff30;padding:1rem 0}.m-floor-list dt{font:400 3rem/1 var(--serif);color:var(--m-accent)}.m-floor-list dd{margin:0;font-size:1rem}
+.m-film-switch{display:flex;gap:1.5rem;margin-bottom:1.5rem}
+.m-film-switch button{background:none;border:0;border-bottom:1px solid #ffffff40;color:var(--m-muted);font:inherit;font-size:1rem;min-height:48px;padding:.6rem 0;cursor:pointer}
+.m-film-switch button[aria-pressed=true]{color:#e0c5a3;border-color:currentColor}
+.m-single-film{display:block;width:100%;height:min(75svh,740px);background:#0b0b0a;object-fit:contain}
+@media(max-width:700px){
+ .m-chapters{grid-template-columns:1fr}
+ .m-room-story>figure img,.m-salotto>figure img{max-height:none}
+ .m-room-wide{padding:0 6vw 2rem}
+ .m-comparison-layout{grid-template-columns:1fr;gap:2rem}
+ .m-comparison-copy{padding-bottom:1rem}
+ .m-facts{margin-top:1.5rem}
+ .m-comparison-handle>span{width:46px;height:46px}
+ .m-compare-label{top:.75rem}.m-before-label{left:.75rem}.m-after-label{right:.75rem}
+ .m-single-film{height:65svh;min-height:320px}
+}

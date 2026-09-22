@@ -146,9 +146,10 @@
 .m-film-switch button[aria-pressed=true]{color:#e0c5a3;border-color:currentColor}
 .m-single-film{display:block;width:100%;height:min(75svh,740px);background:#0b0b0a;object-fit:contain}
 .m-material-layout>figure{height:auto;align-self:start;position:sticky;top:5rem}
-.m-material-layout>figure img{height:auto;max-height:85svh;object-fit:contain}
+.m-material-layout>figure img{height:85svh;max-height:none;object-fit:cover;object-position:center}
 @media(max-width:700px){
  .m-material-layout>figure{position:static}
+ .m-material-layout>figure img{height:65svh}
  .m-chapters{grid-template-columns:1fr}
  .m-room-story>figure img,.m-salotto>figure img{max-height:none}
  .m-room-wide{padding:0 6vw 2rem}
@@ -189,3 +190,100 @@
 .m-material-code:hover{color:var(--m-accent)}
 .m-material-code:focus-visible{outline:2px solid var(--m-accent);outline-offset:6px}
 .m-material-sheets .m-sample-hint{font-size:.8rem;margin-top:-.25rem;margin-bottom:1.5rem;color:var(--m-muted)}
+
+/* Photographic spreads: context, intervention, and construction details. */
+.mantegna-editorial main :is(.m-room-story,.m-common,.m-bathrooms,.m-salotto,.m-corridors) h2{font-size:clamp(2.75rem,4.4vw,5rem)}
+.mantegna-editorial main :is(.m-room-story,.m-common,.m-bathrooms,.m-salotto,.m-corridors) h3{font-size:clamp(2rem,3vw,3.6rem)}
+.mantegna-editorial :is(.m-room-story,.m-common,.m-bathrooms,.m-salotto,.m-corridors) figcaption{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid #ffffff30;font-size:.875rem;line-height:1.5}
+.mantegna-editorial .m-light figcaption{border-color:#17171530}
+.m-restaurant-opening{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:5vw;align-items:center}
+.m-restaurant-intro{min-width:0}
+.m-restaurant-intro>p{color:var(--m-muted);max-width:30rem;margin:1.8rem 0}
+.mantegna-editorial .m-restaurant-intro .m-label{color:var(--m-accent);margin-bottom:1.5rem}
+.m-restaurant-facts{display:grid;grid-template-columns:1fr 1fr;margin:2.5rem 0 0;padding-top:1.25rem;border-top:1px solid #ffffff30;gap:1.5rem}
+.m-restaurant-facts>div{display:flex;flex-direction:column-reverse;gap:.65rem}
+.m-restaurant-facts dt{font-size:.875rem;color:var(--m-muted)}
+.m-restaurant-facts dd{font:400 clamp(2.8rem,4vw,4.5rem)/1 var(--serif);margin:0;color:var(--m-accent)}
+.mantegna-editorial .m-restaurant-intro .m-service-note{font-size:.875rem;margin:1.5rem 0 0}
+.m-restaurant-photo .m-photo{background:none}
+.m-restaurant-photo img{width:100%;height:auto;max-height:none;object-fit:cover;aspect-ratio:4/3}
+.m-restaurant-photo figcaption span:first-child{color:var(--m-accent)}
+.m-comparison-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:6vw;margin-top:5rem;padding-top:4rem;border-top:1px solid #ffffff30;align-items:center}
+.m-comparison-copy>p:not(.m-label){max-width:33rem;color:var(--m-muted)}
+.m-inline-sample{background:none;color:inherit;border:0;border-bottom:1px solid currentColor;font-family:inherit;cursor:pointer;text-align:left}
+.m-comparison-copy .m-details{margin-top:2rem}
+.m-comparison-copy .m-detail-grid{gap:1rem}
+.m-comparison-copy .m-detail-grid img{height:auto;max-height:none;aspect-ratio:3/4;object-fit:cover}
+.mantegna-editorial .m-comparison-figure figcaption{display:block;font-size:.875rem;color:var(--m-muted)}
+.m-room-gallery{display:grid;grid-template-columns:1.6fr 1fr;gap:1.5rem;padding:0 6vw;align-items:start}
+.m-room-gallery .m-photo{height:clamp(320px,42vw,720px);overflow:hidden;background:none}
+.m-room-gallery img{height:100%;object-fit:cover}
+.m-room-gallery>figure:first-child img{object-position:40% center}
+.m-room-explanation{padding:3rem 6vw}
+.m-room-explanation .m-room-copy{display:grid;grid-template-columns:1fr 1fr;column-gap:6vw;padding:0}
+.m-room-explanation .m-room-copy>.m-label{grid-column:1;grid-row:1;margin:0 0 1rem}
+.m-room-explanation .m-room-copy>h3{grid-column:1;grid-row:2/4}
+.m-room-explanation .m-room-copy>p:not(.m-label){grid-column:2;grid-row:1/3;margin:0}
+.m-room-explanation .m-note{grid-column:2;margin-top:1rem;padding-top:1rem}
+.m-room-wide{padding-bottom:3rem}
+.m-room-wide .m-photo{overflow:hidden}
+.m-room-wide img{max-height:none;aspect-ratio:2/1;object-fit:cover;object-position:center 55%}
+.m-room-entry{grid-template-columns:.8fr 1.2fr;padding-top:0;padding-bottom:5rem;gap:6vw}
+.m-room-entry .m-photo img{max-height:none;height:auto;aspect-ratio:3/4;object-fit:cover}
+.m-bathrooms{border-top:1px solid #ffffff30}
+.m-bath-story{grid-template-columns:.8fr 1.2fr;gap:6vw}
+.m-bath-story img{max-height:none;aspect-ratio:4/3;object-fit:cover;object-position:center 50%}
+.m-bath-copy>p:last-child{max-width:35rem}
+.mantegna-editorial .m-salotto{display:grid;grid-template-columns:.9fr 1.4fr;padding:5rem 6vw;gap:5vw;align-items:center}
+.m-salotto>.m-heading{display:block;padding:0;margin:0}
+.m-salotto>.m-heading>p{margin-top:1.8rem}
+.m-salotto>figure img{max-height:none;aspect-ratio:4/3;object-fit:cover}
+.mantegna-editorial .m-salotto>figure figcaption{padding:1rem 0}
+.m-corridors{border-top:1px solid #17171530}
+.m-corridor-pair{grid-template-columns:1.25fr 1fr;gap:1.5rem;align-items:start}
+.m-corridor-pair>figure:last-child{padding-top:0}
+.m-corridor-pair .m-photo{height:clamp(380px,48vw,740px);overflow:hidden}
+.m-corridor-pair img{height:100%;max-height:none;object-fit:cover}
+.m-corridor-pair>figure:first-child img{object-position:35% center}
+.m-corridors .m-detail-grid img{max-height:none;aspect-ratio:4/3;object-fit:cover}
+@media(max-width:1000px){
+ .m-restaurant-opening{grid-template-columns:1fr 1.25fr;gap:3vw;align-items:start}
+ .mantegna-editorial main .m-restaurant-intro h2{font-size:clamp(2.5rem,4.7vw,4rem)}
+ .m-restaurant-facts{margin-top:1.5rem}.m-comparison-layout{gap:4vw}
+}
+@media(max-width:700px){
+ .m-restaurant-opening{grid-template-columns:1fr;gap:2rem}
+ .m-restaurant-intro>p{max-width:none;margin:1.25rem 0}
+ .m-restaurant-facts{margin-top:1.5rem;max-width:28rem}
+ .mantegna-editorial .m-restaurant-photo figcaption{flex-direction:column;gap:.25rem}
+ .m-comparison-layout{grid-template-columns:1fr;margin-top:2.5rem;padding-top:2.5rem;gap:2rem}
+ .m-comparison-copy{padding:0}
+ .m-room-gallery{grid-template-columns:1fr 1fr;gap:.75rem}
+ .m-room-gallery .m-photo{height:65vw;min-height:220px;max-height:400px}
+ .m-room-gallery>figure:first-child img{object-position:35% center}
+ .mantegna-editorial .m-room-gallery figcaption{font-size:.875rem;padding:.75rem 0}
+ .m-room-explanation{padding:2rem 6vw}.m-room-explanation .m-room-copy{display:block;padding:0}
+ .m-room-explanation .m-room-copy>h3{margin:0 0 1.5rem}.m-room-explanation .m-note{margin-top:1.5rem}
+ .m-room-wide{padding-bottom:2rem}.m-room-wide img{aspect-ratio:4/3}
+ .m-room-entry{grid-template-columns:1fr;gap:1.5rem;padding-bottom:3rem}
+ .m-room-entry .m-photo img{aspect-ratio:1/1;object-position:center 45%}
+ .m-bath-story{grid-template-columns:1fr;gap:2rem}.m-bath-story img{aspect-ratio:4/3}
+ .mantegna-editorial .m-salotto{grid-template-columns:1fr;padding:3rem 6vw;gap:2rem}
+ .m-salotto>figure img{aspect-ratio:4/3}
+ .m-corridor-pair{grid-template-columns:1fr 1fr;gap:.75rem}
+ .m-corridor-pair .m-photo{height:82vw;min-height:260px;max-height:480px}
+ .m-corridor-pair>figure:first-child img{object-position:32% center}
+ .m-corridors .m-detail-grid img{aspect-ratio:3/4}
+}
+
+/* Keep portrait evidence legible on narrow screens. */
+@media(max-width:480px){
+ .m-room-gallery{grid-template-columns:1fr;gap:1.5rem}
+ .m-room-gallery .m-photo{height:auto;min-height:0;max-height:none}
+ .m-room-gallery img{height:auto;aspect-ratio:4/3}
+ .m-room-gallery>figure:last-child img{aspect-ratio:3/4}
+ .m-corridor-pair{grid-template-columns:1fr;gap:1.5rem}
+ .m-corridor-pair .m-photo{height:auto;min-height:0;max-height:none}
+ .m-corridor-pair img{height:auto;aspect-ratio:3/4}
+ .m-restaurant-facts{gap:1rem}
+}

@@ -287,3 +287,28 @@
  .m-corridor-pair img{height:auto;aspect-ratio:3/4}
  .m-restaurant-facts{gap:1rem}
 }
+
+/* Worksite: one photographic record paired with the ordered production sequence. */
+.m-worksite{border-top:1px solid #ffffff30}
+.mantegna-editorial main .m-worksite h2{font-size:clamp(2.75rem,4.4vw,5rem)}
+.m-worksite .m-heading{margin-bottom:3rem}
+.m-worksite-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:7vw;align-items:start}
+.m-worksite-photo .m-photo{background:transparent}
+.m-worksite-photo img{width:100%;height:auto}
+.m-worksite-photo figcaption{border-bottom:1px solid #ffffff30}
+.m-worksite-process{padding-top:.25rem}
+.m-worksite-steps{list-style:none;margin:0;padding:0;border-top:1px solid #ffffff30}
+.m-worksite-steps li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:1.25rem;padding:1.35rem 0;border-bottom:1px solid #ffffff30}
+.m-step-number{font:400 2.2rem/1.1 var(--serif);color:var(--m-accent)}
+.mantegna-editorial main .m-worksite-steps h3{font:500 1.125rem/1.4 var(--sans);letter-spacing:0;margin:0 0 .35rem}
+.mantegna-editorial main .m-worksite-steps p{font-size:1rem;line-height:1.65;color:var(--m-muted);margin:0;max-width:35rem}
+@media(max-width:900px){
+ .m-worksite-layout{gap:4vw;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+ .m-worksite-steps li{gap:.75rem;padding:1rem 0}
+}
+@media(max-width:700px){
+ .m-worksite .m-heading{margin-bottom:2rem}
+ .m-worksite-layout{grid-template-columns:1fr;gap:2.5rem}
+ .m-worksite-photo{max-width:32rem;width:100%;margin-inline:auto}
+ .m-worksite-steps li{grid-template-columns:2.2rem minmax(0,1fr);gap:1rem;padding:1.25rem 0}
+}

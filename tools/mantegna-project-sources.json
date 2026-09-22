@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-22",
-  "status": "Pagina aggiornata con camere finite, armadi, dettaglio porta esterna PW-2320 e foto di lavorazione dell’area bagni. Album iCloud esaminato: recuperato IMG_5398; acquisizione completa ancora non riuscita.",
+  "status": "Sezione 03 dedicata all’organizzazione del cantiere e alla lavorazione in serie, su indicazione diretta di Yuri. Le porte dei bagni restano nel perimetro degli interventi e nella scheda PS-503.",
   "assets": [
     {
       "source_name": "IMG_1467.JPEG",
@@ -28,7 +28,7 @@
       "source_name": "IMG_5398.JPEG",
       "source_url": "https://photos.icloud.com/shared/album/09fdoCb7CK02YDrqACNokHgqQ",
       "site_asset": "assets/img/realizzazioni/savhotel-mantegna/bagni-lavorazione.webp",
-      "description": "Foto del 3 aprile 2026, durante i lavori; non attribuita a uno specifico piano e non presentata come risultato finito.",
+      "description": "Elementi smontati e raccolti nell’area di lavoro. Su correzione diretta di Yuri del 2026-09-22, utilizzata per raccontare l’organizzazione del cantiere; non attribuita alle porte dei bagni, a un piano specifico o a un risultato finito.",
       "original_archive_library_id": "libfile_aa70f1fd99188191b36be0790b6354a7"
     },
     {
@@ -87,7 +87,8 @@
     "Le foto camera documentano il contesto complessivo; non attribuire tutto il restyling a Iconic",
     "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati",
     "Distinguere fotografie di cantiere da risultati finiti.",
-    "Non affermare che l’intero album iCloud sia stato acquisito."
+    "Non affermare che l’intero album iCloud sia stato acquisito.",
+    "Nessuna sezione dedicata alle porte dei bagni: capitolo 03 sul cantiere. La foto IMG_5398 non identifica porte dei bagni."
   ],
   "research_folders": [
     "https://drive.google.com/drive/folders/1Qd_uME1kQ9O13Fa5H0AnNJuGhq-4TGxm",
@@ -98,7 +99,7 @@
   "icloud_album_review": {
     "item_count": 640,
     "reviewed": "2026-09-22",
-    "observed": "Foto e video camere, armadi, corridoi, porte ristorante e lavorazioni bagni. Fotografie bagni visualizzate tra elementi 9 e 15; IMG_5398 identificata tramite pannello Info. Non assegnare un piano specifico dalla sola vista.",
+    "observed": "Album con foto e video di camere, armadi, corridoi, porte ristorante e lavorazioni. IMG_5398 identificata tramite pannello Info e ricontestualizzata da Yuri come documentazione dell’organizzazione del cantiere; non attribuire gli elementi ai bagni o a un piano dalla sola vista.",
     "download_status": "IMG_5398 recuperata in HEIC originale e JPEG. Download del gruppo non riuscito: il browser ha rifiutato il protocollo del collegamento generato. Non tentare aggiramenti. JPEG inserito come documentazione di cantiere."
   },
   "material_samples": [
@@ -121,5 +122,21 @@
       "source": "https://vinkinteriorfilm.be/nl/de-collectie/3m-di-noc/single-colour",
       "image": "https://vinkinteriorfilm.be/uploads/media/reference_image/08/3248-3M%20Di-Noc%20PS-503.jpg?v=1-0"
     }
-  ]
+  ],
+  "worksite_evidence": {
+    "source": "Indicazione diretta di Yuri in chat, 2026-09-22",
+    "sequence": [
+      "Smontaggio",
+      "Numerazione",
+      "Preparazione",
+      "Rivestimento",
+      "Rimontaggio"
+    ],
+    "facts": [
+      "Lavorazione in serie degli elementi",
+      "Gestione ordinata del materiale",
+      "Pretagli accurati per ogni elemento di arredo"
+    ],
+    "photo_research": "Esaminati gli scatti disponibili delle cartelle Hotel Mantegna e Foto per pagina Mantegna e cercati cantiere/pretagli. Non trovate ulteriori foto verificabili che documentino chiaramente la preparazione dei pretagli. IMG_5398 illustra gli elementi raccolti; non è presentata come prova visiva dei pretagli o della numerazione."
+  }
 }

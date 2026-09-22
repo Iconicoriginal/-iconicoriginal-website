@@ -414,12 +414,8 @@
  .mantegna-editorial .m-room-entry{padding-inline:0}
  .m-room-entry>.m-room-copy,.m-restaurant-intro,.m-comparison-copy,.m-worksite-process,.m-corridor-technical{padding-inline:6vw}
  .mantegna-editorial .m-salotto{padding-bottom:0}
- .m-salotto-scene{grid-column:1/7;align-self:stretch}
- .m-salotto-heading{grid-column:7/13;padding:3rem 6vw}
- .m-salotto-note{grid-column:1/7;padding:3rem 6vw;align-self:center}
- .m-salotto-wall{grid-column:7/13;margin-top:0!important;border:0;align-self:stretch}
- .m-salotto :is(.m-salotto-scene,.m-salotto-wall)>.m-photo{height:100%}
- .mantegna-editorial .m-salotto :is(.m-salotto-scene,.m-salotto-wall) img{height:100%;min-height:30vw;aspect-ratio:4/3;object-fit:cover}
+ /* Preserve the lounge collage; only its outgoing edge meets the corridor. */
+ .m-salotto-wall{grid-column:7/13;border-left:0}
  .mantegna-editorial .m-corridors{border-top:0}
  .m-corridor-opening,.m-corridor-access{align-items:stretch}
  .m-corridor-opening>.m-heading{padding:4rem 6vw;align-self:center}

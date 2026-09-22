@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-22",
-  "status": "Finiture confermate da Yuri il 22 settembre 2026 e inserite nella pagina; album iCloud esaminato, download originali non riuscito",
+  "status": "Pagina aggiornata con camere finite, armadi, dettaglio porta esterna PW-2320 e foto di lavorazione dell’area bagni. Album iCloud esaminato: recuperato IMG_5398; acquisizione completa ancora non riuscita.",
   "assets": [
     {
       "source_name": "IMG_1467.JPEG",
@@ -16,6 +16,20 @@
       "source_name": "IMG_1463.JPEG",
       "source_url": "https://drive.google.com/file/d/1PVO_xqT0sidCrUfyd7Cm3XpemKgHRcqh/view?usp=drivesdk",
       "source_folder": "Hotel Mantegna / Foto per pagina mantegna"
+    },
+    {
+      "source_name": "IMG_4319.JPEG",
+      "source_url": "https://drive.google.com/file/d/1LtbBuWT4oiro77lvOSmVJHoKXsfgcw2F/view?usp=drivesdk",
+      "source_folder": "Foto per pagina mantegna",
+      "site_asset": "assets/img/realizzazioni/savhotel-mantegna/porta-camera-esterno-pw2320.webp",
+      "description": "Porta camera dal corridoio, finita. PW-2320 secondo mappatura confermata da Yuri."
+    },
+    {
+      "source_name": "IMG_5398.JPEG",
+      "source_url": "https://photos.icloud.com/shared/album/09fdoCb7CK02YDrqACNokHgqQ",
+      "site_asset": "assets/img/realizzazioni/savhotel-mantegna/bagni-lavorazione.webp",
+      "description": "Foto del 3 aprile 2026, durante i lavori; non attribuita a uno specifico piano e non presentata come risultato finito.",
+      "original_archive_library_id": "libfile_aa70f1fd99188191b36be0790b6354a7"
     }
   ],
   "material_evidence": [
@@ -57,13 +71,16 @@
     "10 piani con IconicWall, 90 pannelli"
   ],
   "missing": [
-    "Acquisire le foto originali dei bagni dall’album iCloud, con associazione al piano quando verificabile"
+    "Acquisizione completa degli originali dell’album iCloud di 640 elementi: resta bloccata; un solo scatto recuperato in HEIC e JPEG.",
+    "Foto delle porte dei bagni finite, con associazione al piano 1 o 13 quando verificabile."
   ],
   "editorial_rules": [
     "Prima/dopo con cursore trascinabile, mai fotografie affiancate",
     "Il progetto hall IconicWall nei documenti è una proposta: non descriverlo come opera completata",
     "Le foto camera documentano il contesto complessivo; non attribuire tutto il restyling a Iconic",
-    "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati"
+    "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati",
+    "Distinguere fotografie di cantiere da risultati finiti.",
+    "Non affermare che l’intero album iCloud sia stato acquisito."
   ],
   "research_folders": [
     "https://drive.google.com/drive/folders/1Qd_uME1kQ9O13Fa5H0AnNJuGhq-4TGxm",
@@ -75,6 +92,6 @@
     "item_count": 640,
     "reviewed": "2026-09-22",
     "observed": "Foto e video camere, armadi, corridoi, porte ristorante e lavorazioni bagni. Fotografie bagni visualizzate tra elementi 9 e 15; IMG_5398 identificata tramite pannello Info. Non assegnare un piano specifico dalla sola vista.",
-    "download_status": "Download album, download foto e salvataggio media non hanno restituito un file utilizzabile nella sessione. Nessuna nuova foto iCloud inserita nella pagina."
+    "download_status": "IMG_5398 recuperata in HEIC originale e JPEG. Download del gruppo non riuscito: il browser ha rifiutato il protocollo del collegamento generato. Non tentare aggiramenti. JPEG inserito come documentazione di cantiere."
   }
 }

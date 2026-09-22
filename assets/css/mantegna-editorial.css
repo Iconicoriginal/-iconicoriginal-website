@@ -182,3 +182,10 @@
  .m-bath-story img{max-height:none}
  .m-bathrooms .m-heading{margin-bottom:2rem}
 }
+
+/* Material codes open the same sample dialogs used on Guess. */
+.m-material-code{display:inline-flex;align-items:center;gap:1.3rem;padding:0 0 .2em;border:0;border-bottom:1px solid currentColor;background:none;color:inherit;font:inherit;letter-spacing:inherit;cursor:pointer;text-align:left}
+.m-material-code span{font-family:var(--sans);font-size:.55em}
+.m-material-code:hover{color:var(--m-accent)}
+.m-material-code:focus-visible{outline:2px solid var(--m-accent);outline-offset:6px}
+.m-material-sheets .m-sample-hint{font-size:.8rem;margin-top:-.25rem;margin-bottom:1.5rem;color:var(--m-muted)}

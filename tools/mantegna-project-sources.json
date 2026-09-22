@@ -30,6 +30,13 @@
       "site_asset": "assets/img/realizzazioni/savhotel-mantegna/bagni-lavorazione.webp",
       "description": "Foto del 3 aprile 2026, durante i lavori; non attribuita a uno specifico piano e non presentata come risultato finito.",
       "original_archive_library_id": "libfile_aa70f1fd99188191b36be0790b6354a7"
+    },
+    {
+      "site_asset": "assets/img/realizzazioni/savhotel-mantegna/porte-ristorante-prima-ricostruzione.webp",
+      "source_asset": "assets/img/realizzazioni/savhotel-mantegna/porte-ristorante-finite.webp",
+      "method": "OpenAI imagegen: localized image edit, then WebP optimization",
+      "description": "Prima ricostruito su richiesta di Yuri, chiaramente etichettato nello slider. Il dopo originale resta invariato.",
+      "prompt": "Recolor only all restaurant door stiles, rails, glass mouldings and complete casing white. Preserve glass, handle, shadows, composition and room. Keep background wooden wardrobe unchanged."
     }
   ],
   "material_evidence": [
@@ -93,5 +100,26 @@
     "reviewed": "2026-09-22",
     "observed": "Foto e video camere, armadi, corridoi, porte ristorante e lavorazioni bagni. Fotografie bagni visualizzate tra elementi 9 e 15; IMG_5398 identificata tramite pannello Info. Non assegnare un piano specifico dalla sola vista.",
     "download_status": "IMG_5398 recuperata in HEIC originale e JPEG. Download del gruppo non riuscito: il browser ha rifiutato il protocollo del collegamento generato. Non tentare aggiramenti. JPEG inserito come documentazione di cantiere."
-  }
+  },
+  "material_samples": [
+    {
+      "code": "PW-2320MT",
+      "project_shorthand": "PW-2320",
+      "asset": "assets/img/materiali/pw-2320mt.webp",
+      "source": "https://www.3m.com.sg/3M/en_SG/p/d/v101692347/",
+      "image": "https://multimedia.3m.com/mws/media/2367839J/di-noc-pw-2320mt-thumbnail.jpg"
+    },
+    {
+      "code": "PS-885",
+      "asset": "assets/img/materiali/ps-885.webp",
+      "source": "https://vinkinteriorfilm.be/nl/de-collectie/3m-di-noc/single-colour",
+      "image": "https://vinkinteriorfilm.be/uploads/media/reference_image/09/3239-3M%20Di-Noc%20PS-885.jpg?v=1-0"
+    },
+    {
+      "code": "PS-503",
+      "asset": "assets/img/materiali/ps-503.webp",
+      "source": "https://vinkinteriorfilm.be/nl/de-collectie/3m-di-noc/single-colour",
+      "image": "https://vinkinteriorfilm.be/uploads/media/reference_image/08/3248-3M%20Di-Noc%20PS-503.jpg?v=1-0"
+    }
+  ]
 }

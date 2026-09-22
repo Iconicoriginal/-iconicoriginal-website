@@ -381,7 +381,8 @@ ${alternates}
 ${meta.bodyClass?.includes("home-page") ? `<link rel="stylesheet" href="/assets/css/home-page.css?v=${V}"><script src="/assets/js/home-page.js?v=${V}" defer></script>` : ""}
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <script src="/assets/js/script.js?v=${V}" defer></script>
-${meta.bodyClass?.includes("guess-editorial") ? `<link rel="stylesheet" href="/assets/css/guess-editorial.css?v=${V}"><script src="/assets/js/guess-editorial.js?v=${V}" defer></script>` : ""}
+${meta.bodyClass?.includes("guess-editorial") ? `<link rel="stylesheet" href="/assets/css/guess-editorial.css?v=${V}"><script src="/assets/js/guess-editorial.js?v=${V}" defer></script>` : ""}${meta.bodyClass?.includes("mantegna-editorial") ? `
+<link rel="stylesheet" href="/assets/css/mantegna-editorial.css?v=1"><script src="/assets/js/mantegna-editorial.js?v=1" defer></script>` : ""}
   ${ldTags}
 </head>
 <body${meta.bodyClass ? ` class="${meta.bodyClass}"` : ""} data-page="${slug}">

@@ -1,0 +1,117 @@
+/* Savhotel Mantegna: an editorial journey through the hotel. */
+.mantegna-editorial{--m-ink:#171715;--m-paper:#f2f0eb;--m-accent:#baa184;--m-muted:#ceccc5;background:var(--m-ink);color:var(--m-paper)}
+.mantegna-editorial main{overflow:clip}
+.mantegna-editorial main :is(h1,h2,h3){font-family:var(--serif);font-weight:400;letter-spacing:-.035em;margin:0;line-height:1.04}
+.mantegna-editorial main h2{font-size:clamp(2.8rem,5.7vw,6.3rem)}
+.mantegna-editorial main h3{font-size:clamp(2rem,3.5vw,4rem)}
+.mantegna-editorial main em{font-family:inherit;font-style:italic;color:var(--m-accent)}
+.mantegna-editorial main p{font-size:1.0625rem;line-height:1.75}
+.mantegna-editorial main .m-label{font-family:var(--sans);font-size:.875rem;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;margin:0 0 1.5rem}
+.mantegna-editorial main>section{width:100%;max-width:none;margin:0}
+.mantegna-editorial .m-pad{padding:clamp(3.5rem,6vw,6rem) 6vw}
+.mantegna-editorial :is(section,details)[id]{scroll-margin-top:6rem}
+.mantegna-editorial figure{margin:0;min-width:0}
+.mantegna-editorial figcaption{font-size:.875rem;line-height:1.5;padding:1rem 0;color:var(--m-muted)}
+.mantegna-editorial .m-light{background:var(--m-paper);color:var(--m-ink);--m-muted:#59574f;--m-accent:#82684c}
+.m-link{display:inline-flex;align-items:center;gap:2rem;padding:.85rem 0;border-bottom:1px solid currentColor;font-size:.9375rem;line-height:1.5;color:inherit;text-decoration:none}
+.m-link span{font-size:1.25rem}
+.m-hero{position:relative;isolation:isolate;min-height:100svh;display:flex;align-items:end;padding:11rem 6vw 3.5rem}
+.m-hero>img,.m-closing>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.m-hero:after,.m-closing:after{content:"";position:absolute;inset:0;background:#0007;z-index:1}
+.m-hero .breadcrumbs{position:absolute;top:7rem;left:6vw;right:6vw}
+.m-hero-content{width:100%}
+.mantegna-editorial .m-hero h1{font-size:clamp(4.5rem,10.5vw,12rem);line-height:.94;letter-spacing:-.04em;margin:0 0 2.2rem}
+.mantegna-editorial .m-hero em,.mantegna-editorial .m-closing em{color:#e0c5a3}
+.m-hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:2rem;padding-top:1.5rem;border-top:1px solid #ffffff66}
+.mantegna-editorial .m-hero-bottom p{font:400 clamp(1.5rem,2.3vw,2.5rem)/1.2 var(--serif);margin:0}
+.m-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem 8vw}
+.m-intro-copy{padding-top:2.5rem;color:var(--m-muted)}
+.m-intro-copy p{margin:0 0 1.25rem}
+.m-numbers{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);margin:0;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30;padding:1.8rem 0}
+.m-numbers>div{display:flex;flex-direction:column-reverse;gap:.6rem;padding:0 2rem;border-right:1px solid #ffffff30}
+.m-numbers>div:first-child{padding-left:0}.m-numbers>div:last-child{border-right:0}
+.m-numbers dt{font-size:.875rem;color:var(--m-muted)}
+.m-numbers dd{font:400 clamp(3.5rem,6vw,6rem)/1 var(--serif);margin:0;color:var(--m-accent)}
+.m-chapters{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.m-chapters a{font-size:1rem;display:flex;gap:1rem;align-items:baseline;padding:.5rem 0;color:inherit;text-decoration:none}
+.m-chapters a span{font-size:.875rem;color:var(--m-accent)}
+.m-chapters a:hover{text-decoration:underline;text-underline-offset:6px}
+.m-room{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.m-room-copy{padding:clamp(3.5rem,6vw,6rem) 6vw;display:flex;flex-direction:column;justify-content:center}
+.m-room-copy h2{margin-bottom:2rem!important}
+.m-room-copy>p:not(.m-label){color:var(--m-muted);max-width:34rem;margin:0 0 1.25rem}
+.m-note{border-top:1px solid #17171530;margin-top:1.5rem;padding-top:1.5rem;display:flex;flex-direction:column;gap:.65rem}
+.m-note span{font-size:.875rem;color:var(--m-muted)}.m-note strong{font-size:1rem;font-weight:500}
+.m-photo{display:block;background:#272621;cursor:zoom-in}
+.m-photo img{display:block;width:100%;height:auto;transition:filter .25s}
+.m-photo:hover img{filter:brightness(1.06)}
+.m-room>figure{padding:3rem 4vw 2rem 0;align-self:center}
+.m-room .m-photo img{max-height:760px;object-fit:contain;background:#dedbd4}
+.m-heading{display:grid;grid-template-columns:1.1fr .85fr;gap:8vw;align-items:end;margin-bottom:2.5rem}
+.m-heading>p{max-width:34rem;color:var(--m-muted);margin:0}
+.m-restaurant-photo img{max-height:78svh;object-fit:contain;background:#252421}
+.m-door-heading{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end;margin:3rem 0 2rem}
+.m-door-heading>p{color:var(--m-muted);margin:0}
+.m-door-pair,.m-corridor-pair,.m-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.m-door-pair .m-photo img{max-height:650px;object-fit:contain}
+.m-details{border-top:1px solid #ffffff40;margin-top:2.5rem;padding-top:.6rem}
+.m-details summary{list-style:none;font-size:1rem;line-height:1.5;padding:1rem 2.5rem 1rem 0;position:relative;cursor:pointer}
+.m-details summary::-webkit-details-marker{display:none}
+.m-details summary:after{content:"+";position:absolute;right:0;top:.65rem;font-size:1.6rem}
+.m-details[open] summary:after{content:"−"}
+.m-detail-grid{margin-top:1.5rem}
+.m-detail-grid img{max-height:560px;object-fit:contain}
+.m-corridor-pair{grid-template-columns:1.05fr .8fr;align-items:start;gap:5vw}
+.m-corridor-pair>figure:last-child{padding-top:5rem}
+.m-corridor-pair img{max-height:720px;object-fit:contain;background:#dedbd4}
+.m-system-note{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #17171530;display:grid;grid-template-columns:.5fr 1.4fr auto;gap:2rem;align-items:center}
+.m-system-note p{margin:0!important}.m-system-note strong{display:block;font-weight:500}
+.m-light .m-details{border-color:#17171540}
+.m-video-pair{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.m-video-pair video{display:block;width:100%;height:clamp(320px,44vw,600px);background:#080808;object-fit:contain}
+.m-video-pair figcaption{display:flex;gap:1rem}.m-video-pair figcaption span{color:var(--m-accent)}
+.m-materials{border-top:1px solid #ffffff30}
+.m-materials>header{border-bottom:1px solid #ffffff30}
+.m-material-layout{display:grid;grid-template-columns:1fr 1fr}
+.m-material-layout>figure{height:100%;overflow:hidden}
+.m-material-layout>figure a{height:100%}
+.m-material-layout>figure img{height:100%;object-fit:cover}
+.m-material-sheets{padding:0 6vw}
+.m-material-sheets article{padding:3rem 0}
+.m-material-sheets article+article{border-top:1px solid #ffffff30}
+.m-material-sheets article>img{display:block;width:240px;max-width:100%;height:auto;margin-bottom:2rem}
+.m-material-sheets article>img.m-iw-logo{width:175px;max-height:55px;object-fit:contain;object-position:left}
+.m-material-sheets .m-label{color:var(--m-accent)}
+.m-material-sheets h3{font-size:clamp(2rem,3vw,3.5rem)!important}
+.m-material-sheets article>p:not(.m-label){color:var(--m-muted)}
+.m-material-sheets dl{margin:1.5rem 0 0}
+.m-material-sheets dl div{display:grid;grid-template-columns:6.5rem 1fr;gap:1rem;border-top:1px solid #ffffff25;padding:.8rem 0;font-size:.9375rem;line-height:1.5}
+.m-material-sheets dt{color:var(--m-accent)}.m-material-sheets dd{margin:0}
+.m-closing{position:relative;isolation:isolate;min-height:80svh;padding:5rem 6vw 4rem;display:flex;justify-content:space-between;align-items:end;gap:2rem}
+.mantegna-editorial .m-closing h2{font-size:clamp(3.4rem,8vw,9rem)}
+.m-closing .m-link{white-space:nowrap}
+.mantegna-editorial .project-nav{background:var(--m-ink);color:var(--m-paper)}
+.mantegna-editorial .project-nav a{color:var(--m-accent)}.mantegna-editorial .project-nav strong{color:var(--m-paper)}
+.m-photo-dialog{position:fixed;inset:0;border:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:5rem 4vw 2rem;background:var(--m-ink);color:var(--m-paper)}
+.m-photo-dialog::backdrop{background:#000c}
+.m-photo-dialog>img{width:100%;height:calc(100% - 3rem);object-fit:contain}
+.m-photo-dialog>p{font-size:.9375rem!important;line-height:1.5!important;text-align:center;margin:.6rem 0 0}
+.m-photo-close{position:absolute;top:1rem;right:4vw;background:transparent;border:1px solid #ffffff60;color:inherit;width:48px;height:48px;font-size:2rem;cursor:pointer}
+.mantegna-editorial main :is(a,button,summary):focus-visible{outline:2px solid #b38e62;outline-offset:5px}
+@media(max-width:1000px){.m-system-note{grid-template-columns:1fr 2fr}.m-system-note .m-link{grid-column:2;justify-self:start}.m-closing{align-items:start;flex-direction:column;justify-content:end}.m-heading,.m-door-heading{gap:4vw}.m-material-sheets{padding:0 4vw}}
+@media(max-width:700px){
+ .mantegna-editorial .m-pad{padding:3rem 6vw}.mantegna-editorial main h2{font-size:clamp(2.7rem,10vw,4rem)}
+ .m-hero{min-height:92svh;padding:10rem 6vw 2.5rem}.m-hero .breadcrumbs{top:6.5rem;font-size:.75rem}.mantegna-editorial .m-hero h1{font-size:clamp(3.7rem,13vw,6rem);line-height:1}.m-hero-bottom{display:block}.m-hero-bottom .m-link{margin-top:1rem}
+ .m-intro{grid-template-columns:1fr;gap:2rem}.m-intro-copy{padding:0}.m-numbers{gap:.8rem;padding:1.5rem 0}.m-numbers>div{padding:0 .5rem 0 0;gap:.6rem}.m-numbers dd{font-size:3rem}.m-numbers dt{font-size:.8125rem;line-height:1.5}.m-chapters{grid-template-columns:1fr;gap:0}.m-chapters a{padding:.7rem 0;border-bottom:1px solid #ffffff25}
+ .m-room{grid-template-columns:1fr}.m-room-copy{padding:3rem 6vw 1rem}.m-room>figure{padding:1rem 6vw 2rem}.m-room .m-photo img{max-height:650px}
+ .m-heading,.m-door-heading{grid-template-columns:1fr;gap:1.5rem}.m-heading{margin-bottom:2rem}.m-door-heading{margin-top:2rem}.m-restaurant-photo img{max-height:none}
+ .m-door-pair,.m-corridor-pair,.m-detail-grid{gap:1rem}.m-door-pair figcaption,.m-corridor-pair figcaption,.m-detail-grid figcaption{font-size:.8125rem}.m-corridor-pair{grid-template-columns:1fr 1fr}.m-corridor-pair>figure:last-child{padding-top:2rem}
+ .m-system-note{grid-template-columns:1fr;gap:1rem}.m-system-note .m-link{grid-column:1}.m-video-pair{grid-template-columns:1fr;gap:1.5rem}.m-video-pair video{height:60svh;max-height:560px;min-height:300px}
+ .m-material-layout{grid-template-columns:1fr}.m-material-layout>figure{max-height:65svh}.m-material-layout>figure img{height:65svh;object-fit:contain}.m-material-sheets{padding:0 6vw}.m-material-sheets article{padding:2.5rem 0}.m-material-sheets dl div{grid-template-columns:6rem 1fr}
+ .m-closing{min-height:75svh;padding:3rem 6vw}.mantegna-editorial .m-closing h2{font-size:clamp(3.1rem,11vw,4.6rem)}.m-closing .m-link{white-space:normal}.m-photo-dialog{padding:5rem 3vw 3.5rem}
+}
+@media(prefers-reduced-motion:reduce){.mantegna-editorial *{scroll-behavior:auto!important;transition:none!important}}
+
+.m-hero-content,.m-closing>div,.m-closing>.m-link{position:relative;z-index:2}
+.mantegna-editorial .m-hero .breadcrumbs{padding:0}
+.mantegna-editorial .site-header.scrolled{background:#f2f0eb;color:#171715}

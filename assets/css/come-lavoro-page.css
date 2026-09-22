@@ -29,3 +29,95 @@ html:has(.method-page),.method-page{overflow-x:clip}.method-page{background:var(
 @media(max-width:59.99rem){.method-breadcrumbs{display:none}.method-hero .intro-grid{grid-template-columns:minmax(0,1fr)}.method-hero .intro-copy{grid-column:1}.method-manifesto{grid-template-columns:minmax(0,1fr)}.method-manifesto .split{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-xl)}.method-process-layout{grid-template-columns:minmax(0,1fr)}.method-visual{position:relative;height:62svh}.method-process .method-step{min-height:auto;opacity:1}.method-progress{display:none}}
 @media(max-width:39.99rem){.method-hero{padding-inline:1.25rem}.method-hero h1{font-size:clamp(3.2rem,15vw,5rem)}.method-process>.section-head{padding-inline:1.25rem}.method-process .method-step{grid-template-columns:2.4rem minmax(0,1fr);padding:4rem 1.25rem}.method-process .method-step p{grid-column:1/-1}.method-visual{height:52svh}.method-proof{padding-inline:1.25rem}}
 @media(prefers-reduced-motion:reduce){.method-visual>img,.method-process .method-step{transition-duration:150ms;transform:none}}
+
+/* Approved Italian revision: preserve heading sizes and clarify the process. */
+.method-revised :is(h1,h2,h3) em,
+.method-revised .method-proof .pledge-copy h2 em,
+.method-revised .intro-number,
+.method-revised .method-step > span,
+.method-revised .method-step h3 small {
+  font-style: italic;
+  font-synthesis: style;
+}
+.method-revised .display { line-height: 1.05; }
+.method-revised .display em { padding-inline-end: .08em; }
+.method-revised .method-hero > img { filter: saturate(.85); }
+.method-revised .method-hero::after { background: rgba(0, 0, 0, .46); }
+.method-revised .method-hero h1 em,
+.method-revised .method-process :is(h2 em, .method-step > span, .method-step h3 small),
+.method-revised .method-closing .display em { color: #d8b993; }
+.method-revised .method-hero .lead { color: #fff; }
+.method-revised .method-process .method-step {
+  opacity: 1;
+  transition: background-color .35s ease;
+  padding-block: clamp(3rem, 6vw, 6rem);
+  box-shadow: inset 3px 0 transparent;
+}
+.method-revised .method-process .method-step.is-active {
+  background: rgba(255,255,255,.035);
+  box-shadow: inset 3px 0 #aa8b68;
+}
+.method-revised .method-process .method-step p { color: #e2dfd9; }
+.method-revised .method-process .method-step h3 small { font-size: .875rem; }
+.method-revised .method-closing {
+  position: relative;
+  display: grid;
+  align-items: end;
+  isolation: isolate;
+  min-height: clamp(36rem, 82svh, 58rem);
+  padding: 6rem 7vw;
+  overflow: hidden;
+  text-align: left;
+  color: #fff;
+  background: #171612;
+  scroll-margin-top: 4rem;
+}
+.method-revised .method-closing > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}
+.method-revised .method-closing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0,0,0,.44);
+}
+.method-revised .method-closing-content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+.method-revised .method-closing .display {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 7.8vw, 8.5rem);
+  line-height: 1.05;
+  overflow-wrap: normal;
+}
+.method-revised .method-closing .button {
+  flex-shrink: 0;
+  margin-bottom: .4rem;
+  border-color: rgba(255,255,255,.65);
+  background: rgba(0,0,0,.2);
+  color: #fff;
+}
+.method-revised .method-closing .button:hover,
+.method-revised .method-closing .button:focus-visible { background: #fff; color: #171612; }
+@media(max-width:61.99rem) {
+  .method-revised .method-closing-content { flex-direction: column; align-items: start; gap: 2rem; }
+}
+@media(max-width:47.99rem) {
+  .method-revised .method-closing { min-height: 36rem; padding: 5rem 6vw; }
+  .method-revised .method-closing .display { font-size: clamp(2.8rem, 11vw, 5rem); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .method-revised .method-process .method-step { transition: none; }
+}

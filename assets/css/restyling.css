@@ -251,3 +251,133 @@ body[data-page="restyling"] .cta-section .button.light:hover { color: var(--colo
 @media (prefers-reduced-motion: reduce) {
   body[data-page="restyling"] .hero-photo > img { transform: none; }
 }
+
+/* Italian Restyling: align typography with the approved Home. */
+body.restyling-page[data-page="restyling"] .display em,
+body.restyling-page .portal-copy > span,
+body.restyling-page .endorsed-label {
+  font-style: italic;
+  font-synthesis: style;
+}
+body.restyling-page[data-page="restyling"] .hero-photo::after {
+  background: rgba(0, 0, 0, .38);
+}
+body.restyling-page[data-page="restyling"] .hero-photo .display {
+  max-width: 15ch;
+  font-size: clamp(3rem, 8vw, 8rem);
+  line-height: 1.04;
+  overflow-wrap: normal;
+}
+body.restyling-page[data-page="restyling"] .hero-photo .display em,
+body.restyling-page .restyling-closing .display em {
+  color: #d8b993;
+}
+body.restyling-page[data-page="restyling"] .hero-photo .lead { color: #fff; }
+body.restyling-page[data-page="restyling"] .display em { padding-inline-end: .08em; }
+body.restyling-page[data-page="restyling"] > main > .section > .split .display {
+  max-width: 16ch;
+  overflow-wrap: normal;
+  line-height: 1.08;
+}
+body.restyling-page[data-page="restyling"] > main > .restyling-result {
+  padding-block-start: 0;
+}
+body.restyling-page[data-page="restyling"] > main > .restyling-intro > .split {
+  grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr);
+  gap: 6vw;
+  align-items: center;
+}
+body.restyling-page .restyling-intro .split > :first-child { grid-column: 2; grid-row: 1; }
+body.restyling-page .restyling-intro .split > :last-child { grid-column: 1; grid-row: 1; }
+body.restyling-page[data-page="restyling"] > main > .restyling-intro > .split .display {
+  max-width: none;
+  font-size: clamp(3.2rem, 5.5vw, 6rem);
+}
+body.restyling-page .restyling-intro .display > span { display: block; white-space: nowrap; }
+body.restyling-page .restyling-result .section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: clamp(1.5rem, 5vw, 5rem);
+}
+body.restyling-page .ba-slider:focus-visible {
+  outline: 2px solid var(--color-accent-ink);
+  outline-offset: 6px;
+}
+body.restyling-page[data-page="restyling"] .section-light-after-bleed {
+  background: var(--color-paper-2) !important;
+}
+body.restyling-page .restyling-closing {
+  position: relative;
+  display: grid;
+  align-items: end;
+  isolation: isolate;
+  min-height: clamp(36rem, 82svh, 58rem);
+  padding: 6rem 7vw;
+  overflow: hidden;
+  text-align: left;
+  color: #fff;
+  background: #171612;
+}
+body.restyling-page .restyling-closing > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -2;
+}
+body.restyling-page .restyling-closing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, .42);
+}
+body.restyling-page .restyling-closing .display {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3rem, 7.8vw, 8.5rem);
+  line-height: 1.05;
+}
+body.restyling-page .restyling-closing-content {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+body.restyling-page .restyling-closing .button {
+  flex-shrink: 0;
+  margin-bottom: .4rem;
+  border-color: rgba(255, 255, 255, .65);
+  background: rgba(0, 0, 0, .2);
+  color: #fff;
+}
+body.restyling-page .restyling-closing .button:hover,
+body.restyling-page .restyling-closing .button:focus-visible {
+  background: #fff;
+  color: #171612;
+}
+@media (max-width: 61.99rem) {
+  body.restyling-page .restyling-closing-content { flex-direction: column; align-items: start; gap: 2rem; }
+  body.restyling-page[data-page="restyling"] > main > .restyling-intro > .split { grid-template-columns: 1fr; gap: 2rem; }
+  body.restyling-page .restyling-intro .split > :first-child { grid-column: 1; grid-row: 1; }
+  body.restyling-page .restyling-intro .split > :last-child { grid-column: 1; grid-row: 2; }
+}
+@media (max-width: 47.99rem) {
+  body.restyling-page .restyling-intro .display > span { white-space: normal; }
+  body.restyling-page .restyling-intro .display em { white-space: nowrap; }
+  body.restyling-page[data-page="restyling"] .hero-photo .display {
+    font-size: clamp(2.8rem, 12vw, 5.7rem);
+  }
+  body.restyling-page .restyling-result .section-head { grid-template-columns: 1fr; }
+  body.restyling-page .restyling-closing {
+    min-height: 36rem;
+    padding: 5rem 6vw;
+  }
+  body.restyling-page .restyling-closing .display {
+    font-size: clamp(2.8rem, 11vw, 5rem);
+  }
+}

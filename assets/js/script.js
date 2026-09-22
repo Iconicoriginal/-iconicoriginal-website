@@ -694,7 +694,7 @@ if (guessFilm) {
     try {
       const [svgResponse, locationsResponse] = await Promise.all([
         fetch("/assets/data/iconic-project-map.svg"),
-        fetch("/assets/data/project-locations.json"),
+        fetch(map.dataset.locations || "/assets/data/project-locations.json"),
       ]);
       if (!svgResponse.ok || !locationsResponse.ok) throw new Error("map assets");
       const [svgText, allLocations] = await Promise.all([svgResponse.text(), locationsResponse.json()]);
@@ -813,7 +813,7 @@ if (guessFilm) {
   });
 
   /* --- Home: project stage cinematografico --- */
-  document.querySelectorAll("[data-project-stage]").forEach((stage) => {
+  document.querySelectorAll("[data-project-stage]:not([data-home-stage])").forEach((stage) => {
     const images = [...stage.querySelectorAll("[data-stage-image]")];
     const triggers = [...stage.querySelectorAll("[data-stage-trigger]")];
     let frame;

@@ -1,0 +1,158 @@
+[
+  {
+    "city": "Klagenfurt",
+    "lat": 46.6247,
+    "lon": 14.3053,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-klagenfurt"
+  },
+  {
+    "city": "Atene",
+    "city_en": "Athens",
+    "city_de": "Athen",
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-atene"
+  },
+  {
+    "city": "Nicosia",
+    "lat": 35.1856,
+    "lon": 33.3823,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-nicosia"
+  },
+  {
+    "city": "Tournai",
+    "lat": 50.6056,
+    "lon": 3.3878,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-tournai"
+  },
+  {
+    "city": "Amstelveen",
+    "lat": 52.3114,
+    "lon": 4.8701,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-amstelveen"
+  },
+  {
+    "city": "Breda",
+    "lat": 51.5719,
+    "lon": 4.7683,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-breda"
+  },
+  {
+    "city": "Den Haag",
+    "lat": 52.0705,
+    "lon": 4.3007,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-den-haag"
+  },
+  {
+    "city": "Utrecht",
+    "lat": 52.0907,
+    "lon": 5.1214,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-utrecht"
+  },
+  {
+    "city": "Vicolungo",
+    "lat": 45.4771,
+    "lon": 8.4617,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-vicolungo"
+  },
+  {
+    "city": "Amburgo",
+    "city_en": "Hamburg",
+    "city_de": "Hamburg",
+    "lat": 53.5511,
+    "lon": 9.9937,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-amburgo"
+  },
+  {
+    "city": "Berlino",
+    "city_en": "Berlin",
+    "city_de": "Berlin",
+    "lat": 52.52,
+    "lon": 13.405,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-berlino"
+  },
+  {
+    "city": "Parigi",
+    "city_en": "Paris",
+    "city_de": "Paris",
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-parigi"
+  },
+  {
+    "city": "Milano — Via Torino",
+    "city_en": "Milan — Via Torino",
+    "city_de": "Mailand — Via Torino",
+    "lat": 45.466,
+    "lon": 9.185,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-milano-via-torino"
+  },
+  {
+    "city": "Savona",
+    "lat": 44.309,
+    "lon": 8.477,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-savona"
+  },
+  {
+    "city": "Genova",
+    "city_en": "Genoa",
+    "city_de": "Genua",
+    "lat": 44.4056,
+    "lon": 8.9463,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-genova"
+  },
+  {
+    "city": "Roma",
+    "city_en": "Rome",
+    "city_de": "Rom",
+    "lat": 41.9028,
+    "lon": 12.4964,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-roma"
+  },
+  {
+    "city": "Milano — Corso Buenos Aires",
+    "city_en": "Milan — Corso Buenos Aires",
+    "city_de": "Mailand — Corso Buenos Aires",
+    "lat": 45.478,
+    "lon": 9.208,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-milano-corso-buenos-aires"
+  },
+  {
+    "city": "Esch-sur-Alzette",
+    "lat": 49.4958,
+    "lon": 5.9806,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-esch"
+  },
+  {
+    "city": "Cuneo",
+    "lat": 44.3845,
+    "lon": 7.5427,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-cuneo"
+  },
+  {
+    "city": "Innsbruck",
+    "lat": 47.27,
+    "lon": 11.4,
+    "project": "Guess",
+    "href": "/realizzazioni/guess/#sede-innsbruck"
+  }
+]

@@ -17,7 +17,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = join(ROOT, "content");
 const HOST = "https://www.iconicoriginal.it";
 const LANGS = ["it", "en", "de"];
-const V = 97; // bump a ogni modifica di styles.css / script.js
+const V = 112; // bump a ogni modifica di styles.css / script.js
 
 /* ------------------------------------------------------------------ */
 /* Dizionari header/footer                                             */
@@ -378,8 +378,10 @@ ${alternates}
   <link rel="stylesheet" href="/assets/css/brand-case-pages.css?v=${V}">
   <link rel="stylesheet" href="/assets/css/single-project-pages.css?v=${V}">
   <link rel="stylesheet" href="/assets/css/progettisti-page.css?v=${V}">
+${meta.bodyClass?.includes("home-page") ? `<link rel="stylesheet" href="/assets/css/home-page.css?v=${V}"><script src="/assets/js/home-page.js?v=${V}" defer></script>` : ""}
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <script src="/assets/js/script.js?v=${V}" defer></script>
+${meta.bodyClass?.includes("guess-editorial") ? `<link rel="stylesheet" href="/assets/css/guess-editorial.css?v=${V}"><script src="/assets/js/guess-editorial.js?v=${V}" defer></script>` : ""}
   ${ldTags}
 </head>
 <body${meta.bodyClass ? ` class="${meta.bodyClass}"` : ""} data-page="${slug}">

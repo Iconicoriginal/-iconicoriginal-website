@@ -37,6 +37,11 @@
       "method": "OpenAI imagegen: localized image edit, then WebP optimization",
       "description": "Prima ricostruito su richiesta di Yuri, chiaramente etichettato nello slider. Il dopo originale resta invariato.",
       "prompt": "Recolor only all restaurant door stiles, rails, glass mouldings and complete casing white. Preserve glass, handle, shadows, composition and room. Keep background wooden wardrobe unchanged."
+    },
+    {
+      "site_asset": "assets/img/realizzazioni/savhotel-mantegna-salotto-parete.webp",
+      "source": "Asset già presente nel sito, utilizzato anche in content/it/restyling.html; richiesto e confermato da Yuri il 2026-09-22",
+      "description": "Parete scura rivestita in 3M DI-NOC nel salotto, vista verso il varco vetrato e il tavolo. Nessun codice finitura specifico attribuito in assenza di conferma."
     }
   ],
   "material_evidence": [
@@ -88,7 +93,10 @@
     "Non usare IMG_2240 e IMG_4321: i file originali risultano troncati",
     "Distinguere fotografie di cantiere da risultati finiti.",
     "Non affermare che l’intero album iCloud sia stato acquisito.",
-    "Nessuna sezione dedicata alle porte dei bagni: capitolo 03 sul cantiere. La foto IMG_5398 non identifica porte dei bagni."
+    "Nessuna sezione dedicata alle porte dei bagni: capitolo 03 sul cantiere. La foto IMG_5398 non identifica porte dei bagni.",
+    "Fotografie principali a filo del bordo dello schermo, rientri riservati al testo.",
+    "Alternare la posizione di testo e fotografia lungo il percorso della pagina.",
+    "Salotto: due viste complementari, con composizione asimmetrica e parziale sovrapposizione; non un confronto prima/dopo."
   ],
   "research_folders": [
     "https://drive.google.com/drive/folders/1Qd_uME1kQ9O13Fa5H0AnNJuGhq-4TGxm",

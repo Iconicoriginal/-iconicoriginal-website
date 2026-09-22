@@ -312,3 +312,98 @@
  .m-worksite-photo{max-width:32rem;width:100%;margin-inline:auto}
  .m-worksite-steps li{grid-template-columns:2.2rem minmax(0,1fr);gap:1rem;padding:1.25rem 0}
 }
+
+/* Edge-to-edge photographic rhythm; text retains a comfortable reading inset. */
+.mantegna-editorial .m-room-gallery{padding-inline:0;gap:1.25vw}
+.mantegna-editorial .m-room-gallery figcaption{padding-inline:2rem}
+.mantegna-editorial .m-room-wide{padding-inline:0}
+.mantegna-editorial .m-room-wide figcaption{padding-inline:6vw}
+.mantegna-editorial .m-room-entry{padding-left:0;padding-right:6vw;grid-template-columns:1fr 1fr}
+.mantegna-editorial .m-room-entry figcaption{padding-left:6vw}
+.mantegna-editorial .m-common{padding-inline:0}
+.m-restaurant-opening{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:5vw}
+.m-restaurant-intro{padding-left:6vw}
+.mantegna-editorial .m-restaurant-photo figcaption{padding-right:3vw}
+.m-comparison-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:6vw}
+.m-comparison-copy{padding-right:6vw}
+.mantegna-editorial .m-comparison-figure figcaption{padding-left:6vw;padding-right:2rem}
+.mantegna-editorial .m-worksite{padding-inline:0}
+.m-worksite>.m-heading{padding-inline:6vw}
+.m-worksite-layout{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-areas:"process photo";gap:6vw}
+.m-worksite-photo{grid-area:photo}
+.m-worksite-process{grid-area:process;padding-left:6vw}
+.m-worksite-photo figcaption{padding-right:3vw}
+
+/* Two intersecting views of the lounge, anchored to opposite screen edges. */
+.mantegna-editorial .m-salotto{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:auto auto;gap:0;padding:0 0 4rem;align-items:start;isolation:isolate}
+.m-salotto-heading{grid-column:9/13;grid-row:1;align-self:center;padding:3rem 4vw}
+.mantegna-editorial main .m-salotto h2{font-size:clamp(2.75rem,4.4vw,5rem)}
+.m-salotto-heading>p:last-child{margin:1.5rem 0 0;color:var(--m-muted)}
+.m-salotto-scene{grid-column:1/9;grid-row:1}
+.mantegna-editorial .m-salotto-scene img{width:100%;height:clamp(30rem,47vw,58rem);max-height:none;object-fit:cover;object-position:43% 55%;aspect-ratio:auto}
+.m-salotto-note{grid-column:2/6;grid-row:2;padding:3rem 0 0}
+.m-salotto-note>p:last-child{max-width:28rem;margin:0;color:var(--m-muted)}
+.m-salotto-note strong{font-weight:500;color:var(--m-ink)}
+.m-salotto-wall{grid-column:7/13;grid-row:2;margin-top:-9vw!important;z-index:1;border-top:10px solid var(--m-paper);border-left:10px solid var(--m-paper)}
+.mantegna-editorial .m-salotto-wall img{width:100%;height:auto;max-height:none;aspect-ratio:4/3;object-fit:cover}
+.m-salotto>figure{position:relative}
+.mantegna-editorial .m-salotto>figure figcaption{position:absolute;inset:auto 0 0;display:flex;align-items:baseline;justify-content:flex-start;gap:1rem;padding:3rem 2rem 1.2rem;border:0;color:#fff;background:linear-gradient(transparent,#000b);pointer-events:none;font-size:.875rem;letter-spacing:.02em}
+.m-salotto figcaption span{font:400 1.7rem/1 var(--serif);color:#e0c5a3}
+
+/* The corridor opens on the left; the technical view answers on the right. */
+.mantegna-editorial .m-corridors{padding:0;border-top:1px solid #17171530}
+.m-corridor-opening,.m-corridor-access{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6vw;align-items:center}
+.m-corridor-opening>.m-heading{display:block;margin:0;padding:4rem 6vw 4rem 0}
+.m-corridor-opening>.m-heading>p{margin-top:2rem}
+.m-corridor-opening>figure img{width:100%;height:clamp(32rem,55vw,62rem);object-fit:cover;object-position:center}
+.mantegna-editorial .m-corridor-opening>figure figcaption{padding-left:6vw}
+.m-corridor-access{padding-top:3rem}
+.m-corridor-technical{padding:3rem 0 3rem 6vw}
+.m-corridor-technical .m-system-note{display:block;margin:0;padding:0;border:0}
+.m-corridor-technical .m-system-note>p:not(.m-label){margin-top:1.5rem!important}
+.m-corridor-technical .m-system-note strong{font:400 clamp(1.8rem,2.8vw,3.2rem)/1.15 var(--serif);margin-bottom:1rem}
+.m-corridor-technical .m-system-note .m-link{margin-top:1rem}
+.m-corridor-access>figure img{width:100%;height:clamp(30rem,52vw,58rem);object-fit:cover}
+.mantegna-editorial .m-corridor-access>figure figcaption{padding-right:6vw}
+.mantegna-editorial .m-films{padding-inline:0}
+.m-films>.m-heading,.m-film-switch,.m-films>noscript{margin-inline:6vw}
+@media(max-width:1000px){
+ .m-salotto-heading{grid-column:8/13;padding:2rem 4vw}
+ .m-salotto-scene{grid-column:1/8}
+ .mantegna-editorial .m-salotto-scene img{height:clamp(30rem,60vw,45rem)}
+ .m-salotto-note{grid-column:1/6;padding:2.5rem 4vw 0}
+ .m-salotto-wall{grid-column:6/13;margin-top:-6vw!important}
+ .m-corridor-opening,.m-corridor-access{gap:4vw}
+ .m-corridor-opening>.m-heading{padding-right:4vw}
+ .m-corridor-technical{padding-left:4vw}
+}
+@media(max-width:700px){
+ .mantegna-editorial .m-room-entry{grid-template-columns:1fr;padding-inline:0}
+ .m-room-entry>.m-room-copy{padding-inline:6vw}
+ .mantegna-editorial .m-room-gallery figcaption{padding-inline:6vw}
+ .m-restaurant-opening{grid-template-columns:1fr;gap:2rem}
+ .m-restaurant-intro{padding-inline:6vw}
+ .mantegna-editorial .m-restaurant-photo figcaption{padding-inline:6vw}
+ .m-comparison-layout{grid-template-columns:1fr}
+ .m-comparison-copy{padding-inline:6vw}
+ .mantegna-editorial .m-common,.mantegna-editorial .m-worksite,.mantegna-editorial .m-films{padding-inline:0}
+ .m-worksite-layout{grid-template-columns:1fr;grid-template-areas:"process" "photo";gap:2rem}
+ .m-worksite-process{padding-inline:6vw}
+ .m-worksite-photo{max-width:none}
+ .m-worksite-photo figcaption{padding-inline:6vw}
+ .mantegna-editorial .m-salotto{display:flex;flex-direction:column;padding:0 0 3rem;gap:0}
+ .m-salotto-heading{order:0;align-self:stretch;padding:3rem 6vw 2rem}
+ .m-salotto-scene{order:1;width:100%}
+ .mantegna-editorial .m-salotto-scene img{height:auto;aspect-ratio:4/3}
+ .m-salotto-wall{order:2;width:88%;align-self:flex-end;margin-top:-2rem!important;border-width:6px}
+ .mantegna-editorial .m-salotto-scene figcaption{inset:0 0 auto;padding:1.1rem 6vw 3rem;background:linear-gradient(#0009,transparent)}
+ .mantegna-editorial .m-salotto-wall figcaption{padding:3rem 1rem 1rem;font-size:.875rem}
+ .m-salotto-note{order:3;padding:2rem 6vw 0}
+ .m-corridor-opening,.m-corridor-access{display:flex;flex-direction:column;gap:0;align-items:stretch}
+ .m-corridor-opening>.m-heading{order:-1;padding:3rem 6vw 2rem}
+ .m-corridor-opening>figure img,.m-corridor-access>figure img{height:auto;aspect-ratio:3/4}
+ .m-corridor-opening>.m-heading>p{margin-top:1.5rem}
+ .m-corridor-access{padding-top:0}
+ .m-corridor-technical{padding:2rem 6vw}
+ .mantegna-editorial .m-corridors figure figcaption{padding-inline:6vw}
+}
